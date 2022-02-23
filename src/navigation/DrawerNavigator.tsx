@@ -4,16 +4,21 @@ import {
   aboutProjectRoute,
   contactsRoute,
   mapRoute,
+  notificationRoute,
   notificationsRoute,
   placesRoute,
   settingsRoute,
 } from './types';
 import { PlacesScreen } from '@features/places/screens';
 import Drawer from './Drawer';
-import { colors, fonts, fontSizes, lineHeights } from '@styles/constants';
-import { Image, StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { Image } from 'react-native';
 import { SettingsScreen } from '@features/settings/screens';
 import { ContactsScreen } from '@features/contacts/screens';
+import { AboutProjectScreen } from '@features/about/screens';
+import { NotificationsScreen } from '@features/notifications/screens';
+import { Notification } from '@features/notifications/types';
+import { drawerStyle, headerStyle, headerTitleStyle } from '@styles/styles';
+import { MapScreen } from '@features/map/screens';
 
 const menuIcon = require('@assets/images/menu.png');
 
@@ -24,40 +29,23 @@ export type DrawerParamList = {
   [aboutProjectRoute]: undefined;
   [notificationsRoute]: undefined;
   [mapRoute]: undefined;
+  [notificationRoute]: { notification: Notification };
 };
 
 const MainDrawer = createDrawerNavigator<DrawerParamList>();
-
-export const drawerStyle: StyleProp<ViewStyle> = {
-  width: 320,
-  backgroundColor: colors.white,
-  borderBottomRightRadius: 20,
-  borderTopRightRadius: 20,
-  paddingVertical: 50,
-};
-
-export const headerStyle: StyleProp<ViewStyle> = {
-  backgroundColor: colors.background,
-  elevation: 0,
-};
-
-export const headerTitleStyle: StyleProp<TextStyle> = {
-  color: colors.text.primary,
-  fontSize: fontSizes.m,
-  lineHeight: lineHeights.m,
-  fontFamily: fonts.primary.bold,
-};
 
 const screenOptions = {
   drawerStyle,
   headerStyle,
   headerTitleStyle,
+  headerShadowVisible: false,
   drawerIcon: () => <Image source={menuIcon} />,
 };
 
 const DrawerNavigator: FC = () => {
   return (
     <MainDrawer.Navigator drawerContent={Drawer} screenOptions={screenOptions}>
+      <MainDrawer.Screen name={mapRoute} options={{ title: 'Map' }} component={MapScreen} />
       <MainDrawer.Screen
         name={placesRoute}
         options={{ title: 'Discover' }}
@@ -72,6 +60,16 @@ const DrawerNavigator: FC = () => {
         name={contactsRoute}
         options={{ title: 'Contact us' }}
         component={ContactsScreen}
+      />
+      <MainDrawer.Screen
+        name={aboutProjectRoute}
+        options={{ title: 'About project' }}
+        component={AboutProjectScreen}
+      />
+      <MainDrawer.Screen
+        name={notificationsRoute}
+        options={{ title: 'Notifications' }}
+        component={NotificationsScreen}
       />
     </MainDrawer.Navigator>
   );

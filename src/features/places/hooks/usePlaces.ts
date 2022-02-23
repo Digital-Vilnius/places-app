@@ -4,7 +4,7 @@ import { mapPlace } from '../map';
 import { useAppSelector } from '@core/store';
 
 export const getQueryKey = (lang: string) => {
-  return ['usePlaces', lang];
+  return ['places', lang];
 };
 
 const usePlaces = () => {

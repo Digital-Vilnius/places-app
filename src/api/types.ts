@@ -1,4 +1,4 @@
-export interface ListRequest {
+export interface Request {
   lang: string;
 }
 

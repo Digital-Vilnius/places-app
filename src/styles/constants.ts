@@ -23,6 +23,7 @@ export const colors = {
 
 export const sizes = {
   xxxs: 2,
+  xxs1: 5,
   xxs: 8,
   xs: 10,
   s: 12,
@@ -31,10 +32,12 @@ export const sizes = {
   xl: 25,
   xl1: 30,
   xxl: 35,
+  xxxl: 50,
 };
 
 export const borderRadius = {
   s: sizes.xs,
+  m: sizes.l,
 };
 
 export const fontSizes = {
@@ -49,6 +52,7 @@ export const lineHeights = {
   s: 16,
   m: 18,
   l: 20,
+  xl: 22,
 };
 
 export const spacings = {
