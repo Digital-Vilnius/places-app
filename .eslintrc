@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "@react-native-community",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-native",
+    "prettier"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
