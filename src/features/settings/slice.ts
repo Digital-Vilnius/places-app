@@ -1,28 +1,32 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface State {
-  lang: string;
+  locale: string | null;
   isNotificationsOn: boolean;
+  isTermsAndConditionsAgreed: boolean;
 }
 
 const initialState: State = {
-  lang: 'en',
+  locale: null,
   isNotificationsOn: false,
+  isTermsAndConditionsAgreed: false,
 };
 
 const settingsSlice = createSlice({
   name: 'settings',
   initialState,
   reducers: {
-    setLanguage(state, action: PayloadAction<{ lang: string }>) {
-      state.lang = action.payload.lang;
+    setLocale(state, action: PayloadAction<{ locale: string }>) {
+      state.locale = action.payload.locale;
     },
-    setSettings(state, action: PayloadAction<State>) {
-      state.lang = action.payload.lang;
+    agreeTermsAndConditions(state) {
+      state.isTermsAndConditionsAgreed = true;
+    },
+    setIsNotificationsOn(state, action: PayloadAction<{ isNotificationsOn: boolean }>) {
       state.isNotificationsOn = action.payload.isNotificationsOn;
     },
   },
 });
 
-export const { setLanguage, setSettings } = settingsSlice.actions;
+export const { setLocale, setIsNotificationsOn, agreeTermsAndConditions } = settingsSlice.actions;
 export const { reducer } = settingsSlice;

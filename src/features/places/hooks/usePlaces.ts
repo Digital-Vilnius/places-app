@@ -3,15 +3,15 @@ import { useQuery } from 'react-query';
 import { mapPlace } from '../map';
 import { useAppSelector } from '@core/store';
 
-export const getQueryKey = (lang: string) => {
-  return ['places', lang];
+export const getQueryKey = (locale: string) => {
+  return ['places', locale];
 };
 
 const usePlaces = () => {
-  const { lang } = useAppSelector((state) => state.settings);
+  const { locale } = useAppSelector((state) => state.settings);
 
-  const getPlacesFn = () => PlacesClient.getPlaces({ lang });
-  const { isLoading, data, isRefetching, refetch } = useQuery(getQueryKey(lang), getPlacesFn);
+  const getPlacesFn = () => PlacesClient.getPlaces({ lang: locale });
+  const { isLoading, data, isRefetching, refetch } = useQuery(getQueryKey(locale), getPlacesFn);
 
   return {
     isLoading,

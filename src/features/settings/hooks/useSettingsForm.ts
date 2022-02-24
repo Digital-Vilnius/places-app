@@ -3,8 +3,10 @@ import { useForm } from 'react-hook-form';
 import { SettingsFormData } from '../types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useAppDispatch, useAppSelector } from '@core/store';
-import { setSettings } from '@features/settings/slice';
+import { setIsNotificationsOn } from '@features/settings/slice';
 import { ToastService } from '@core/toast';
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 const getSchema = () => {
   return yup
@@ -17,17 +19,19 @@ const getSchema = () => {
 };
 
 const useSettingsForm = () => {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
-  const { lang, isNotificationsOn } = useAppSelector((state) => state.settings);
+  const { locale, isNotificationsOn } = useAppSelector((state) => state.settings);
 
   const { control, handleSubmit } = useForm<SettingsFormData>({
     resolver: yupResolver(getSchema()),
-    defaultValues: { lang, isNotificationsOn },
+    defaultValues: { lang: locale, isNotificationsOn },
   });
 
   const save = async (data: SettingsFormData) => {
-    dispatch(setSettings(data));
-    ToastService.success('Success!', 'Settings successfully updated');
+    dispatch(setIsNotificationsOn({ isNotificationsOn: data.isNotificationsOn }));
+    await i18n.changeLanguage(data.lang);
+    ToastService.success(t('titles.success'), t('phrases.settings_successfully_updated'));
   };
 
   return { control, handleSubmit, save };

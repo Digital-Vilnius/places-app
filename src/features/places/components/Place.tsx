@@ -17,6 +17,7 @@ import MapView, { Marker, Region } from 'react-native-maps';
 import hexToRgba from 'hex-to-rgba';
 import Swiper from 'react-native-swiper';
 import ReadMore from '@fawazahmed/react-native-read-more';
+import { useTranslation } from 'react-i18next';
 
 const { width } = Dimensions.get('window');
 const mapHeight = (width - sizes.xs) * 0.33;
@@ -31,6 +32,7 @@ interface Props {
 
 const Place: FC<Props> = (props) => {
   const { place } = props;
+  const { t } = useTranslation();
 
   const initialRegion: Region = {
     longitude: place.coordinates.longitude,
@@ -63,10 +65,10 @@ const Place: FC<Props> = (props) => {
           </View>
         </View>
         <View style={bottomSpacings.l}>
-          <Text style={styles.sectionTitle}>About place</Text>
+          <Text style={styles.sectionTitle}>{t('titles.about_place')}</Text>
           <ReadMore
-            seeLessText="Read less"
-            seeMoreText="Read more"
+            seeLessText={t('buttons.read_less')}
+            seeMoreText={t('buttons.read_more')}
             seeLessStyle={styles.descriptionToggle}
             seeMoreStyle={styles.descriptionToggle}
             seeMoreContainerStyleSecondary={{}}
@@ -76,7 +78,11 @@ const Place: FC<Props> = (props) => {
             {place.description}
           </ReadMore>
         </View>
-        <Section style={bottomSpacings.l} contentStyle={styles.section} title="Contacts">
+        <Section
+          style={bottomSpacings.l}
+          contentStyle={styles.section}
+          title={t('titles.contacts')}
+        >
           <View style={row}>
             <Image source={phoneIcon} />
             <Text style={styles.contact}>{place.phone}</Text>
@@ -97,7 +103,11 @@ const Place: FC<Props> = (props) => {
           )}
         </Section>
         {place.timetable.length > 0 && (
-          <Section style={bottomSpacings.l} contentStyle={styles.section} title="Visiting hours">
+          <Section
+            style={bottomSpacings.l}
+            contentStyle={styles.section}
+            title={t('titles.visiting_hours')}
+          >
             {place.timetable.map((item, index) => (
               <Text
                 key={item.days}
@@ -110,7 +120,7 @@ const Place: FC<Props> = (props) => {
           </Section>
         )}
         <View>
-          <Text style={styles.sectionTitle}>Address</Text>
+          <Text style={styles.sectionTitle}>{t('titles.address')}</Text>
           <Text style={[styles.link, bottomSpacings.m]}>{place.address}</Text>
           <View style={styles.mapContainer}>
             <MapView initialRegion={initialRegion} scrollEnabled={false} style={flex1}>

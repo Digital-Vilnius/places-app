@@ -3,17 +3,17 @@ import { useQuery } from 'react-query';
 import { mapNotification } from '../map';
 import { useAppSelector } from '@core/store';
 
-export const getQueryKey = (lang: string) => {
-  return ['notifications', lang];
+export const getQueryKey = (locale: string) => {
+  return ['notifications', locale];
 };
 
 const useNotifications = () => {
-  const { lang } = useAppSelector((state) => state.settings);
+  const { locale } = useAppSelector((state) => state.settings);
 
-  const getNotificationsFn = () => NotificationsClient.getNotifications({ lang });
+  const getNotificationsFn = () => NotificationsClient.getNotifications({ lang: locale });
 
   const { isLoading, data, isRefetching, refetch } = useQuery(
-    getQueryKey(lang),
+    getQueryKey(locale),
     getNotificationsFn
   );
 

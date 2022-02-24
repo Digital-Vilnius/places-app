@@ -1,0 +1,44 @@
+{
+  "titles": {
+    "discover": "Discover",
+    "about_place": "About place",
+    "contacts": "Contacts",
+    "visiting_hours": "Visiting hours",
+    "address": "Address",
+    "languages": "Languages",
+    "notifications": "Notifications",
+    "contact_us": "Contact us",
+    "name": "Name",
+    "email_address": "Email address",
+    "subject": "Subject",
+    "message": "Message",
+    "about_project": "About project",
+    "map": "Map",
+    "settings": "Settings",
+    "push_notifications": "Push-notification",
+    "success": "Success",
+    "usage_policy": "Usage policy"
+  },
+  "buttons": {
+    "back": "Back",
+    "update_settings": "Update settings",
+    "read_more": "Read more",
+    "read_less": "Read less",
+    "send": "Send"
+  },
+  "phrases": {
+    "contacts_agreement": "I agree that my filed information can be used and collected for future communication and marketing purposes",
+    "contacts_help": "Please fill out the form below and we will contact you shortly",
+    "no_notifications_title": "No notifications yet",
+    "no_notifications_description": "When you get notifications, they’ll show up here.",
+    "push_notifications_description": "Get notifications about new places ant other relevant information",
+    "message_successfully_send": "Message successfully send",
+    "settings_successfully_updated": "Settings successfully updated"
+  },
+  "validations": {
+    "field_is_required": "Field is required",
+    "field_is_invalid": "Field is invalid",
+    "email_is_invalid": "Email is invalid"
+  }
+}
+

@@ -4,15 +4,15 @@ import { flex1 } from '@styles/styles';
 import { useContactsForm } from '../hooks';
 import { ContactsForm } from '@features/contacts/components';
 import { bottomSpacings, colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
+import { useTranslation } from 'react-i18next';
 
 const Contacts: FC = () => {
   const { control, save, handleSubmit } = useContactsForm();
+  const { t } = useTranslation();
 
   return (
     <ScrollView contentContainerStyle={[styles.container, flex1]}>
-      <Text style={[styles.description, bottomSpacings.xl1]}>
-        Please fill out the form below and we will contact you shortly
-      </Text>
+      <Text style={[styles.description, bottomSpacings.xl1]}>{t('phrases.contacts_help')}</Text>
       <ContactsForm control={control} save={handleSubmit(save)} />
     </ScrollView>
   );

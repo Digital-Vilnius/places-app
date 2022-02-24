@@ -1,13 +1,5 @@
 import React, { FC } from 'react';
-import {
-  KeyboardTypeOptions,
-  StyleProp,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  ViewStyle,
-} from 'react-native';
+import { StyleProp, StyleSheet, Text, TextInput, View, ViewStyle } from 'react-native';
 import { borderRadius, colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 import hexToRgba from 'hex-to-rgba';
 

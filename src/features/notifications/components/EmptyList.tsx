@@ -3,15 +3,18 @@ import { Image, StyleSheet, View, Text } from 'react-native';
 import { center, flex1 } from '@styles/styles';
 import { colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 import hexToRgba from 'hex-to-rgba';
+import { useTranslation } from 'react-i18next';
 
 const bell = require('@assets/images/bell-on.png');
 
 const EmptyList: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <View style={[styles.container, flex1, center]}>
       <Image style={styles.image} source={bell} />
-      <Text style={styles.title}>No notifications yet</Text>
-      <Text style={styles.description}>When you get notifications, they’ll show up here.</Text>
+      <Text style={styles.title}>{t('phrases.no_notifications_title')}</Text>
+      <Text style={styles.description}>{t('phrases.no_notifications_description')}</Text>
     </View>
   );
 };

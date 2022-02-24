@@ -5,6 +5,7 @@ import { ContactsFormData } from '@features/contacts/types';
 import { ContactsClient } from '@api/clients';
 import { useMutation } from 'react-query';
 import { ToastService } from '@core/toast';
+import { useTranslation } from 'react-i18next';
 
 const getSchema = () => {
   return yup
@@ -20,6 +21,8 @@ const getSchema = () => {
 };
 
 const useContactsForm = () => {
+  const { t } = useTranslation();
+
   const { control, handleSubmit, reset } = useForm<ContactsFormData>({
     resolver: yupResolver(getSchema()),
   });
@@ -33,7 +36,7 @@ const useContactsForm = () => {
   const save = async (request: ContactsFormData) => {
     await mutateAsync(request);
     reset({});
-    ToastService.success('Success!', 'Message successfully send');
+    ToastService.success(t('titles.success'), t('phrases.message_successfully_send'));
   };
 
   return { control, handleSubmit, save, isLoading };

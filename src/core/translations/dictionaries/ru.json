@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "map": "Карта",
+    "what_to_visit": "Что посетить",
+    "notifications": "Уведомления",
+    "about_project": "О проекте",
+    "contact_us": "Связаться с нами",
+    "settings": "Настройки",
+    "maritime_inspired_history": "Jūrininkystės įkvėpta istorija",
+    "back_to_map": "Вернуться к карте",
+    "back_to_what_to_visit": "Назад",
+    "back_to_notifications": "Вернуться к уведомлениям",
+    "menu": "Меню"
+  },
+  "buttons": {
+    "get_directions": "Как добраться",
+    "send": "Отправить",
+    "update_settings": "Обновить настройки"
+  },
+  "phrases": {
+    "read_more": "Читать еще",
+    "show_less": "Меньше",
+    "ok": "Хорошо",
+    "no_internet": "Нет активное подключение к Интернету.",
+    "error": "Error",
+    "server_error": "Server error",
+    "no_info": "Нет информации"
+  },
+  "contacts": {
+    "intro": "Пожалуйста, заполните форму ниже, и мы свяжемся с вами в ближайшее время.",
+    "your_name": "Ваше имя",
+    "email_address": "Адрес электронной почты",
+    "subject": "Тема",
+    "message": "Сообщение",
+    "thanks": "Спасибо",
+    "message_sent": "Ваше сообщение отправлено",
+    "required_name": "Пожалуйста, введите Ваше имя",
+    "required_email": "Пожалуйста, введите действительный адрес электронной почты",
+    "required_subject": "Пожалуйста, введите тему",
+    "required_message": "Пожалуйста, введите Ваше сообщение",
+    "agree_to": "Я согласен с тем, что мои данные будут собираться и использоваться для целей коммуникации и прямого маркетинга",
+    "recipient": "Получатель",
+    "required_recipient": "Пожалуйста, выберите получателя",
+    "cancel": "Отмена",
+  },
+  "placeScreen": {
+    "visiting_hours": "Часы посещения"
+  },
+  "settings": {
+    "notifications": "Настройки",
+    "notifications_explanation": "Получайте уведомления о новых местах и другую соответствующую информацию.",
+    "select_language": "Выберите язык",
+    "settings_success": "Настройки обновлены"
+  },
+  "gdpr": {
+    "reviewTitle": "Review Our Terms and Data Policy",
+    "reviewBody": "Followed by new data protection law we prepared application usage policy for you to decide whether current application features and collected data satisfy you and whether you will continue to use this application",
+    "reviewNow": "Review Now",
+    "notNow": "Not now",
+    "termsTitle": "Usage policy",
+    "dataCollectedParties": "Data collected by third parties:",
+    "oneSignal": "1) \"OneSignal\" – used for application remote \"Push Notifications\". More on their privacy policy – ",
+    "devicePermissions": "Device permissions that are used in application:",
+    "internet": "1) \"INTERNET\" – for internet access since application can only run on device with active internet connection.",
+    "networkState": "2) \"ACCESS_NETWORK_STATE\" – to check if current device has active internet connection.",
+    "externalStorage": "3) \"WRITE_EXTERNAL_STORAGE\" – for device storage which is needed to save temporary data to identify logged user in running application.",
+    "message": "4) \"C2D_MESSAGE\" – to get device ID for remote \"Push Notifications\".",
+    "internet_ios": "1) \"NSAppTransportSecurity\" – for internet access since application can only run on device with active internet connection.",
+    "networkState_ios": "2) \"NSLocationWhenInUseUsageDescription\" – to get current user location and show it on the map.",
+    "message_ios": "3) \"UIBackgroundModes\" – to get device ID for remote \"Push Notifications\".",
+    "disclaimer": "Unfortunately if you don't agree on application usage policy described above then you are not able to proceed using it because this policy describes features that are used for smooth operation of the application. To get our application system collected data, request for removing it or any other questions are welcome on email",
+    "legal": "By pressing button \"Agree to Terms\" you agree on described application usage policy and only afterwards you can proceed using current application.",
+    "agreeToTerms": "Agree to Terms",
+    "quitApp": "Quit Application",
+    "thankYou": "Thank you!",
+    "thankYouBody": "You can proceed using this application smoothly",
+    "goBack": "Go back",
+    "notNowTitle": "Restricted application usage",
+    "notNowBody": "Unfortunately you would not be able to use application without accepting usage policy. Features described in the policy provide smooth usage of the application.",
+    "termsAndConditions": "Условия использования"
+  }
+}

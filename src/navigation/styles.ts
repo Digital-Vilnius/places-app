@@ -1,5 +1,6 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
+import hexToRgba from 'hex-to-rgba';
 
 export const headerStyle: StyleProp<ViewStyle> = {
   backgroundColor: colors.background,
@@ -26,4 +27,8 @@ export const headerRightContainerStyle: StyleProp<ViewStyle> = {
 
 export const headerLeftContainerStyle: StyleProp<ViewStyle> = {
   paddingLeft: sizes.l,
+};
+
+export const headerBackgroundContainerStyle: StyleProp<ViewStyle> = {
+  backgroundColor: hexToRgba(colors.transparentHeaderBackground, 0.2),
 };

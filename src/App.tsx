@@ -6,6 +6,9 @@ import { persistor, store } from '@core/store';
 import { Provider } from 'react-redux';
 import RootNavigator from '@navigation/RootNavigator';
 import Toast from 'react-native-toast-message';
+import { setupTranslations } from '@core/translations';
+
+setupTranslations();
 
 const App: FC = () => {
   return (

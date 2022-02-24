@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Button, LanguagesChoice, Section, Switch } from '@components';
 import { bottomSpacings, colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 import { flex1, row, spaceBetween } from '@styles/styles';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   control: Control<SettingsFormData>;
@@ -13,22 +14,27 @@ interface Props {
 
 const SettingsForm: FC<Props> = (props) => {
   const { onSave, control } = props;
+  const { t } = useTranslation();
 
   return (
     <View>
-      <Section contentStyle={styles.languagesContent} style={bottomSpacings.l} title="Languages">
+      <Section
+        contentStyle={styles.languagesContent}
+        style={bottomSpacings.l}
+        title={t('titles.languages')}
+      >
         <Controller
           control={control}
           name="lang"
           render={({ field }) => <LanguagesChoice onChange={field.onChange} value={field.value} />}
         />
       </Section>
-      <Section style={bottomSpacings.xl} title="Notifications">
+      <Section style={bottomSpacings.xl} title={t('titles.notifications')}>
         <View style={[row, spaceBetween]}>
           <View style={[flex1, styles.notificationsDetails]}>
-            <Text style={styles.notificationsTitle}>Push-notification</Text>
+            <Text style={styles.notificationsTitle}>{t('titles.push_notifications')}</Text>
             <Text style={styles.notificationsDescription}>
-              Get notifications about new places ant other relevant information
+              {t('phrases.push_notifications_description')}
             </Text>
           </View>
           <Controller
@@ -38,7 +44,7 @@ const SettingsForm: FC<Props> = (props) => {
           />
         </View>
       </Section>
-      <Button onPress={onSave} label="Update settings" />
+      <Button onPress={onSave} label={t('buttons.update_settings')} />
     </View>
   );
 };

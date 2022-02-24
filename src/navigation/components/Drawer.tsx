@@ -11,12 +11,14 @@ import {
 } from '@navigation/types';
 import { colors, fonts, fontSizes, lineHeights } from '@styles/constants';
 import { center, flex1 } from '@styles/styles';
+import { useTranslation } from 'react-i18next';
 
 const closeIcon = require('@assets/images/icon_close.png');
 const logo = require('@assets/images/logo.png');
 
 const Drawer: FC<DrawerContentComponentProps> = (props) => {
   const { navigation } = props;
+  const { t } = useTranslation();
 
   return (
     <View style={flex1}>
@@ -28,22 +30,22 @@ const Drawer: FC<DrawerContentComponentProps> = (props) => {
       </View>
       <View style={[flex1, styles.items]}>
         <Text onPress={() => navigation.navigate(mapRoute)} style={styles.item}>
-          Map
+          {t('titles.map')}
         </Text>
         <Text onPress={() => navigation.navigate(placesRoute)} style={styles.item}>
-          Discover
+          {t('titles.discover')}
         </Text>
         <Text onPress={() => navigation.navigate(notificationsRoute)} style={styles.item}>
-          Notifications
+          {t('titles.notifications')}
         </Text>
         <Text onPress={() => navigation.navigate(aboutProjectRoute)} style={styles.item}>
-          About project
+          {t('titles.about_project')}
         </Text>
         <Text onPress={() => navigation.navigate(contactsRoute)} style={styles.item}>
-          Contact us
+          {t('titles.contact_us')}
         </Text>
         <Text onPress={() => navigation.navigate(settingsRoute)} style={styles.item}>
-          Settings
+          {t('titles.settings')}
         </Text>
       </View>
     </View>

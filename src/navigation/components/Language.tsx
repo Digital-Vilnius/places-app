@@ -8,7 +8,7 @@ import { Image, TouchableOpacity } from 'react-native';
 import { LanguagesUtils } from '@utils';
 
 const Language: FC = () => {
-  const { lang } = useAppSelector((state) => state.settings);
+  const { locale } = useAppSelector((state) => state.settings);
   const navigation = useNavigation<DrawerNavigationProp<DrawerParamList>>();
 
   const handleOnPress = () => {
@@ -17,7 +17,7 @@ const Language: FC = () => {
 
   return (
     <TouchableOpacity onPress={handleOnPress}>
-      <Image source={LanguagesUtils.getIcon(lang)} />
+      <Image source={LanguagesUtils.getIcon(locale)} />
     </TouchableOpacity>
   );
 };

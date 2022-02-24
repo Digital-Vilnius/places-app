@@ -24,6 +24,7 @@ import {
 } from './styles';
 import { MapScreen } from '@features/map/screens';
 import { Language, Drawer, DrawerToggleButton, LogoTitle } from './components';
+import { useTranslation } from 'react-i18next';
 
 export type DrawerParamList = {
   [placesRoute]: undefined;
@@ -50,6 +51,8 @@ const screenOptions: DrawerNavigationOptions = {
 };
 
 const DrawerNavigator: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <MainDrawer.Navigator drawerContent={Drawer} screenOptions={screenOptions}>
       <MainDrawer.Screen
@@ -59,27 +62,27 @@ const DrawerNavigator: FC = () => {
       />
       <MainDrawer.Screen
         name={placesRoute}
-        options={{ title: 'Discover' }}
+        options={{ title: t('titles.discover') }}
         component={PlacesScreen}
       />
       <MainDrawer.Screen
         name={settingsRoute}
-        options={{ title: 'Settings', headerRight: undefined }}
+        options={{ title: t('titles.settings'), headerRight: undefined }}
         component={SettingsScreen}
       />
       <MainDrawer.Screen
         name={contactsRoute}
-        options={{ title: 'Contact us' }}
+        options={{ title: t('titles.contact_us') }}
         component={ContactsScreen}
       />
       <MainDrawer.Screen
         name={aboutProjectRoute}
-        options={{ title: 'About project' }}
+        options={{ title: t('titles.about_project') }}
         component={AboutProjectScreen}
       />
       <MainDrawer.Screen
         name={notificationsRoute}
-        options={{ title: 'Notifications' }}
+        options={{ title: t('titles.notifications') }}
         component={NotificationsScreen}
       />
     </MainDrawer.Navigator>

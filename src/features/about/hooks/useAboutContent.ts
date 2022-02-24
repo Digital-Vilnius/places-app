@@ -3,15 +3,18 @@ import { AboutClient } from '@api/clients';
 import { useQuery } from 'react-query';
 import { mapAboutContent } from '@features/about/map';
 
-export const getQueryKey = (lang: string) => {
-  return ['about', lang];
+export const getQueryKey = (locale: string) => {
+  return ['about', locale];
 };
 
 const useAboutContent = () => {
-  const { lang } = useAppSelector((state) => state.settings);
+  const { locale } = useAppSelector((state) => state.settings);
 
-  const getAboutContentFn = () => AboutClient.getAboutContent({ lang });
-  const { isLoading, data, isRefetching, refetch } = useQuery(getQueryKey(lang), getAboutContentFn);
+  const getAboutContentFn = () => AboutClient.getAboutContent({ lang: locale });
+  const { isLoading, data, isRefetching, refetch } = useQuery(
+    getQueryKey(locale),
+    getAboutContentFn
+  );
 
   return {
     isLoading,

@@ -4,6 +4,7 @@ import { Control, Controller } from 'react-hook-form';
 import { ContactsFormData } from '@features/contacts/types';
 import { Button, Input, Radio, Textarea } from '@components';
 import { bottomSpacings } from '@styles/constants';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   control: Control<ContactsFormData>;
@@ -12,6 +13,7 @@ interface Props {
 
 const ContactsForm: FC<Props> = (props) => {
   const { save, control } = props;
+  const { t } = useTranslation();
 
   return (
     <View>
@@ -21,7 +23,7 @@ const ContactsForm: FC<Props> = (props) => {
         render={({ field, fieldState: { error } }) => (
           <Input
             style={bottomSpacings.xs}
-            placeholder="Name"
+            placeholder={t('titles.name')}
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
@@ -36,7 +38,7 @@ const ContactsForm: FC<Props> = (props) => {
           <Input
             keyboardType="email-address"
             style={bottomSpacings.xs}
-            placeholder="Email address"
+            placeholder={t('titles.email_address')}
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
@@ -50,7 +52,7 @@ const ContactsForm: FC<Props> = (props) => {
         render={({ field, fieldState: { error } }) => (
           <Input
             style={bottomSpacings.xs}
-            placeholder="Subject"
+            placeholder={t('titles.subject')}
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
@@ -64,7 +66,7 @@ const ContactsForm: FC<Props> = (props) => {
         render={({ field, fieldState: { error } }) => (
           <Textarea
             style={bottomSpacings.m}
-            placeholder="Message"
+            placeholder={t('titles.message')}
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
@@ -77,14 +79,14 @@ const ContactsForm: FC<Props> = (props) => {
         name="marketingAgreement"
         render={({ field }) => (
           <Radio
-            label="I agree that my filed information can be used and collected for future cummunication and merketing purposes"
+            label={t('phrases.contacts_agreement')}
             style={bottomSpacings.xl}
             onChange={field.onChange}
             checked={field.value}
           />
         )}
       />
-      <Button label="Send" onPress={save} />
+      <Button label={t('buttons.send')} onPress={save} />
     </View>
   );
 };

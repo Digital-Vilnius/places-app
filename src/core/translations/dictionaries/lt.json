@@ -1,0 +1,44 @@
+{
+  "titles": {
+    "discover": "Atrask",
+    "about_place": "Apie vietovę",
+    "contacts": "Kontaktai",
+    "visiting_hours": "Lankymo valandos",
+    "address": "Adresas",
+    "languages": "Kalbos",
+    "notifications": "Pranešimai",
+    "contact_us": "Susisiekite",
+    "name": "Vardas",
+    "email_address": "El. paštas",
+    "subject": "Tema",
+    "message": "Žinutė",
+    "about_project": "Apie projektą",
+    "map": "Žemėlapis",
+    "settings": "Nustatymai",
+    "push_notifications": "Pranešimai",
+    "success": "Sėkmingai atlikta",
+    "usage_policy": "Naudojimosi politika"
+  },
+  "buttons": {
+    "back": "Atgal",
+    "update_settings": "Atnaujinti nustatymus",
+    "read_more": "Skaityti daugiau",
+    "read_less": "Skaityti mažiau",
+    "send": "Siųsti"
+  },
+  "phrases": {
+    "contacts_agreement": "-",
+    "contacts_help": "-",
+    "no_notifications_title": "-",
+    "no_notifications_description": "-",
+    "push_notifications_description": "-",
+    "message_successfully_send": "Žinutė sėkmingai išsiųsta",
+    "settings_successfully_updated": "Nustatymai sėkmingai atnaujinti"
+  },
+  "validations": {
+    "field_is_required": "Laukas yra privalomas",
+    "field_is_invalid": "Laukas yra nevalidus",
+    "email_is_invalid": "El. paštas yra nevalidus"
+  }
+}
+

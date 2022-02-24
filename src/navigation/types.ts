@@ -27,3 +27,6 @@ export const notificationsRoute: NotificationsRoute = 'Notifications';
 
 export type NotificationRoute = 'Notification';
 export const notificationRoute: NotificationRoute = 'Notification';
+
+export type UsagePolicyRoute = 'UsagePolicy';
+export const usagePolicyRoute: UsagePolicyRoute = 'UsagePolicy';
