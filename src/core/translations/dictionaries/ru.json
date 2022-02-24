@@ -1,82 +1,58 @@
 {
-  "navigation": {
-    "map": "Карта",
-    "what_to_visit": "Что посетить",
+  "titles": {
+    "discover": "Обнаружить",
+    "about_place": "О месте",
+    "contacts": "Контакты",
+    "visiting_hours": "Часы посещения",
+    "address": "Адрес",
+    "languages": "Языки",
     "notifications": "Уведомления",
-    "about_project": "О проекте",
     "contact_us": "Связаться с нами",
-    "settings": "Настройки",
-    "maritime_inspired_history": "Jūrininkystės įkvėpta istorija",
-    "back_to_map": "Вернуться к карте",
-    "back_to_what_to_visit": "Назад",
-    "back_to_notifications": "Вернуться к уведомлениям",
-    "menu": "Меню"
-  },
-  "buttons": {
-    "get_directions": "Как добраться",
-    "send": "Отправить",
-    "update_settings": "Обновить настройки"
-  },
-  "phrases": {
-    "read_more": "Читать еще",
-    "show_less": "Меньше",
-    "ok": "Хорошо",
-    "no_internet": "Нет активное подключение к Интернету.",
-    "error": "Error",
-    "server_error": "Server error",
-    "no_info": "Нет информации"
-  },
-  "contacts": {
-    "intro": "Пожалуйста, заполните форму ниже, и мы свяжемся с вами в ближайшее время.",
-    "your_name": "Ваше имя",
+    "name": "Имя",
     "email_address": "Адрес электронной почты",
     "subject": "Тема",
     "message": "Сообщение",
-    "thanks": "Спасибо",
-    "message_sent": "Ваше сообщение отправлено",
-    "required_name": "Пожалуйста, введите Ваше имя",
-    "required_email": "Пожалуйста, введите действительный адрес электронной почты",
-    "required_subject": "Пожалуйста, введите тему",
-    "required_message": "Пожалуйста, введите Ваше сообщение",
-    "agree_to": "Я согласен с тем, что мои данные будут собираться и использоваться для целей коммуникации и прямого маркетинга",
-    "recipient": "Получатель",
-    "required_recipient": "Пожалуйста, выберите получателя",
-    "cancel": "Отмена",
+    "about_project": "О проекте",
+    "map": "карта",
+    "settings": "Настройки",
+    "push_notifications": "Отправить уведомление",
+    "success": "Успех",
+    "usage_policy": "Политика использования"
   },
-  "placeScreen": {
-    "visiting_hours": "Часы посещения"
+  "buttons": {
+    "back": "Назад",
+    "update_settings": "Обновить настройки",
+    "read_more": "Подробнее",
+    "read_less": "Читать меньше",
+    "send": "Отправлять"
   },
-  "settings": {
-    "notifications": "Настройки",
-    "notifications_explanation": "Получайте уведомления о новых местах и другую соответствующую информацию.",
-    "select_language": "Выберите язык",
-    "settings_success": "Настройки обновлены"
+  "phrases": {
+    "contacts_agreement": "Я согласен с тем, что моя поданная информация может быть использована и собрана для будущих коммуникаций и маркетинговых целей",
+    "contacts_help": "Пожалуйста, заполните форму ниже, и мы свяжемся с вами в ближайшее время",
+    "no_notifications_title": "Уведомлений пока нет",
+    "no_notifications_description": "Когда вы получите уведомления, они появятся здесь.",
+    "push_notifications_description": "Получайте уведомления о новых местах и \u200B\u200Bдругую актуальную информацию",
+    "message_successfully_send": "Сообщение успешно отправлено",
+    "settings_successfully_updated": "Настройки успешно обновлены"
+  },
+  "validations": {
+    "field_is_required": "Поле, обязательное для заполнения",
+    "field_is_invalid": "Поле недействительно",
+    "email_is_invalid": "Электронная почта недействительна",
+    "field_must_be_selected": "Поле должно быть выбрано"
   },
   "gdpr": {
-    "reviewTitle": "Review Our Terms and Data Policy",
-    "reviewBody": "Followed by new data protection law we prepared application usage policy for you to decide whether current application features and collected data satisfy you and whether you will continue to use this application",
-    "reviewNow": "Review Now",
-    "notNow": "Not now",
-    "termsTitle": "Usage policy",
-    "dataCollectedParties": "Data collected by third parties:",
-    "oneSignal": "1) \"OneSignal\" – used for application remote \"Push Notifications\". More on their privacy policy – ",
-    "devicePermissions": "Device permissions that are used in application:",
-    "internet": "1) \"INTERNET\" – for internet access since application can only run on device with active internet connection.",
-    "networkState": "2) \"ACCESS_NETWORK_STATE\" – to check if current device has active internet connection.",
-    "externalStorage": "3) \"WRITE_EXTERNAL_STORAGE\" – for device storage which is needed to save temporary data to identify logged user in running application.",
-    "message": "4) \"C2D_MESSAGE\" – to get device ID for remote \"Push Notifications\".",
-    "internet_ios": "1) \"NSAppTransportSecurity\" – for internet access since application can only run on device with active internet connection.",
-    "networkState_ios": "2) \"NSLocationWhenInUseUsageDescription\" – to get current user location and show it on the map.",
-    "message_ios": "3) \"UIBackgroundModes\" – to get device ID for remote \"Push Notifications\".",
-    "disclaimer": "Unfortunately if you don't agree on application usage policy described above then you are not able to proceed using it because this policy describes features that are used for smooth operation of the application. To get our application system collected data, request for removing it or any other questions are welcome on email",
-    "legal": "By pressing button \"Agree to Terms\" you agree on described application usage policy and only afterwards you can proceed using current application.",
-    "agreeToTerms": "Agree to Terms",
-    "quitApp": "Quit Application",
-    "thankYou": "Thank you!",
-    "thankYouBody": "You can proceed using this application smoothly",
-    "goBack": "Go back",
-    "notNowTitle": "Restricted application usage",
-    "notNowBody": "Unfortunately you would not be able to use application without accepting usage policy. Features described in the policy provide smooth usage of the application.",
-    "termsAndConditions": "Условия использования"
+    "data_collected_parties": "Данные, собранные третьими лицами:",
+    "one_signal": "1) «OneSignal» — используется для удаленного приложения «Push Notifications». Подробнее об их политике конфиденциальности —",
+    "device_permissions": "Разрешения устройства, которые используются в приложении:",
+    "internet": "1) «ИНТЕРНЕТ» — для доступа в Интернет, поскольку приложение может работать только на устройстве с активным подключением к Интернету.",
+    "network_state": "2) «ACCESS_NETWORK_STATE» — чтобы проверить, есть ли у текущего устройства активное подключение к Интернету.",
+    "external_storage": "3) «WRITE_EXTERNAL_STORAGE» — для хранения устройства, которое необходимо для сохранения временных данных для идентификации вошедшего пользователя в работающем приложении.",
+    "message": "4) \"C2D_MESSAGE\" – для получения идентификатора устройства для удаленных \"Push-уведомлений\".",
+    "internet_ios": "1) «NSAppTransportSecurity» — для доступа в Интернет, поскольку приложение может работать только на устройстве с активным подключением к Интернету.",
+    "network_state_ios": "2) «NSLocationWhenInUseUsageDescription» — получить текущее местоположение пользователя и показать его на карте.",
+    "message_ios": "3) «UIBackgroundModes» — для получения идентификатора устройства для удаленных «Push-уведомлений».",
+    "disclaimer": "К сожалению, если вы не согласны с политикой использования приложения, описанной выше, вы не сможете продолжить ее использование, потому что эта политика описывает функции, которые используются для бесперебойной работы приложения. Чтобы получить данные, собранные нашей системой приложений, запрос на их удаление или любые другие вопросы приветствуются по электронной почте."
   }
 }
+
