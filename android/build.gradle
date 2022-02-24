@@ -13,11 +13,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        gradlePluginPortal()
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.2")
-        classpath("gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.10, 0.99.99]")
     }
 }
 
@@ -42,5 +40,3 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
-
-apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'

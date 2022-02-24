@@ -39,7 +39,7 @@ const useContactsForm = () => {
     await mutateAsync(request);
   };
 
-  return { control, handleSubmit, save, isLoading };
+  return { control, handleSubmit, save, isLoading, reset };
 };
 
 export default useContactsForm;
