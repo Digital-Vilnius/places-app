@@ -3,6 +3,7 @@ import {
   KeyboardTypeOptions,
   StyleProp,
   StyleSheet,
+  Text,
   TextInput,
   View,
   ViewStyle,
@@ -18,10 +19,11 @@ interface Props {
   placeholder?: string;
   disabled?: boolean;
   style?: StyleProp<ViewStyle>;
+  error?: string;
 }
 
 const Input: FC<Props> = (props) => {
-  const { onChange, value, disabled, placeholder, onBlur, style, keyboardType } = props;
+  const { onChange, value, disabled, placeholder, onBlur, style, keyboardType, error } = props;
 
   return (
     <View style={style}>
@@ -35,6 +37,7 @@ const Input: FC<Props> = (props) => {
         placeholder={placeholder}
         editable={!disabled}
       />
+      {!!error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 };
@@ -49,6 +52,13 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.m,
     lineHeight: lineHeights.m,
     color: colors.text.primary,
+  },
+  error: {
+    color: colors.primary,
+    fontSize: fontSizes.s,
+    lineHeight: lineHeights.s,
+    fontFamily: fonts.secondary.regular,
+    marginTop: sizes.xxxs,
   },
 });
 

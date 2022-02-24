@@ -5,6 +5,7 @@ import queryClient from '@core/query';
 import { persistor, store } from '@core/store';
 import { Provider } from 'react-redux';
 import RootNavigator from '@navigation/RootNavigator';
+import Toast from 'react-native-toast-message';
 
 const App: FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: FC = () => {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <RootNavigator />
+          <Toast topOffset={20} />
         </PersistGate>
       </Provider>
     </QueryClientProvider>

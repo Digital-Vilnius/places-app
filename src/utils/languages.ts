@@ -7,3 +7,9 @@ export const languagesChoices = [
   { icon: russianIcon, value: 'ru', label: 'Русский' },
   { icon: lithuanianIcon, value: 'lt', label: 'Lietuvių' },
 ];
+
+export const getIcon = (lang: string) => {
+  if (lang === 'lt') return lithuanianIcon;
+  if (lang === 'ru') return russianIcon;
+  return englishIcon;
+};

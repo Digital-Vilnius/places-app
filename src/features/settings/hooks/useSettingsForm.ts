@@ -4,6 +4,7 @@ import { SettingsFormData } from '../types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useAppDispatch, useAppSelector } from '@core/store';
 import { setSettings } from '@features/settings/slice';
+import { ToastService } from '@core/toast';
 
 const getSchema = () => {
   return yup
@@ -26,6 +27,7 @@ const useSettingsForm = () => {
 
   const save = async (data: SettingsFormData) => {
     dispatch(setSettings(data));
+    ToastService.success('Success!', 'Settings successfully updated');
   };
 
   return { control, handleSubmit, save };

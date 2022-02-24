@@ -7,9 +7,9 @@ export interface Place {
   description: string;
   phone: string;
   timetable: TimetableItem[];
-  locationAddressUrl: string;
+  locationAddressUrl: string | null;
   coordinates: Coordinates;
-  email: string;
+  email: string | null;
   address: string;
 }
 

@@ -4,6 +4,7 @@ export const colors = {
   black: '#000000',
   white: '#FFFFFF',
   background: '#F7F8F9',
+  primary: '#FF5C58',
   grey: {
     light: '#6A748A',
   },
@@ -45,6 +46,7 @@ export const fontSizes = {
   s: 12,
   m: 14,
   l: 16,
+  xl: 18,
 };
 
 export const lineHeights = {
@@ -67,6 +69,16 @@ export const bottomSpacings = {
   l: { marginBottom: sizes.l },
   xl: { marginBottom: sizes.xl },
   xl1: { marginBottom: sizes.xl1 },
+};
+
+export const topSpacings = {
+  xxs: { marginTop: sizes.xxs },
+  xs: { marginTop: sizes.xs },
+  s: { marginTop: sizes.s },
+  m: { marginTop: sizes.m },
+  l: { marginTop: sizes.l },
+  xl: { marginTop: sizes.xl },
+  xl1: { marginTop: sizes.xl1 },
 };
 
 export const fonts = {

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 import { flex1 } from '@styles/styles';
 import { useContactsForm } from '../hooks';
 import { ContactsForm } from '@features/contacts/components';
@@ -9,12 +9,12 @@ const Contacts: FC = () => {
   const { control, save, handleSubmit } = useContactsForm();
 
   return (
-    <View style={[styles.container, flex1]}>
+    <ScrollView contentContainerStyle={[styles.container, flex1]}>
       <Text style={[styles.description, bottomSpacings.xl1]}>
         Please fill out the form below and we will contact you shortly
       </Text>
       <ContactsForm control={control} save={handleSubmit(save)} />
-    </View>
+    </ScrollView>
   );
 };
 

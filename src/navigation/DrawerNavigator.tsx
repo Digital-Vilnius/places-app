@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerNavigationOptions } from '@react-navigation/drawer';
 import {
   aboutProjectRoute,
   contactsRoute,
@@ -10,17 +10,20 @@ import {
   settingsRoute,
 } from './types';
 import { PlacesScreen } from '@features/places/screens';
-import Drawer from './Drawer';
-import { Image } from 'react-native';
 import { SettingsScreen } from '@features/settings/screens';
 import { ContactsScreen } from '@features/contacts/screens';
 import { AboutProjectScreen } from '@features/about/screens';
 import { NotificationsScreen } from '@features/notifications/screens';
 import { Notification } from '@features/notifications/types';
-import { drawerStyle, headerStyle, headerTitleStyle } from '@styles/styles';
+import {
+  drawerStyle,
+  headerLeftContainerStyle,
+  headerRightContainerStyle,
+  headerStyle,
+  headerTitleStyle,
+} from './styles';
 import { MapScreen } from '@features/map/screens';
-
-const menuIcon = require('@assets/images/menu.png');
+import { Language, Drawer, DrawerToggleButton, LogoTitle } from './components';
 
 export type DrawerParamList = {
   [placesRoute]: undefined;
@@ -34,18 +37,26 @@ export type DrawerParamList = {
 
 const MainDrawer = createDrawerNavigator<DrawerParamList>();
 
-const screenOptions = {
+const screenOptions: DrawerNavigationOptions = {
   drawerStyle,
   headerStyle,
   headerTitleStyle,
+  headerRightContainerStyle,
+  headerLeftContainerStyle,
   headerShadowVisible: false,
-  drawerIcon: () => <Image source={menuIcon} />,
+  headerTitleAlign: 'center',
+  headerRight: () => <Language />,
+  headerLeft: () => <DrawerToggleButton />,
 };
 
 const DrawerNavigator: FC = () => {
   return (
     <MainDrawer.Navigator drawerContent={Drawer} screenOptions={screenOptions}>
-      <MainDrawer.Screen name={mapRoute} options={{ title: 'Map' }} component={MapScreen} />
+      <MainDrawer.Screen
+        name={mapRoute}
+        options={{ headerTitle: LogoTitle }}
+        component={MapScreen}
+      />
       <MainDrawer.Screen
         name={placesRoute}
         options={{ title: 'Discover' }}
@@ -53,7 +64,7 @@ const DrawerNavigator: FC = () => {
       />
       <MainDrawer.Screen
         name={settingsRoute}
-        options={{ title: 'Settings' }}
+        options={{ title: 'Settings', headerRight: undefined }}
         component={SettingsScreen}
       />
       <MainDrawer.Screen

@@ -17,21 +17,22 @@ const ContactsForm: FC<Props> = (props) => {
     <View>
       <Controller
         control={control}
-        name="fullName"
-        render={({ field }) => (
+        name="name"
+        render={({ field, fieldState: { error } }) => (
           <Input
             style={bottomSpacings.xs}
-            placeholder="Full name"
+            placeholder="Name"
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
+            error={error?.message}
           />
         )}
       />
       <Controller
         control={control}
         name="email"
-        render={({ field }) => (
+        render={({ field, fieldState: { error } }) => (
           <Input
             keyboardType="email-address"
             style={bottomSpacings.xs}
@@ -39,32 +40,35 @@ const ContactsForm: FC<Props> = (props) => {
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
+            error={error?.message}
           />
         )}
       />
       <Controller
         control={control}
         name="subject"
-        render={({ field }) => (
+        render={({ field, fieldState: { error } }) => (
           <Input
             style={bottomSpacings.xs}
             placeholder="Subject"
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
+            error={error?.message}
           />
         )}
       />
       <Controller
         control={control}
         name="message"
-        render={({ field }) => (
+        render={({ field, fieldState: { error } }) => (
           <Textarea
             style={bottomSpacings.m}
             placeholder="Message"
             onBlur={field.onBlur}
             onChange={field.onChange}
             value={field.value}
+            error={error?.message}
           />
         )}
       />

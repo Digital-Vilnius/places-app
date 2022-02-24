@@ -3,6 +3,7 @@ import {
   KeyboardTypeOptions,
   StyleProp,
   StyleSheet,
+  Text,
   TextInput,
   View,
   ViewStyle,
@@ -17,10 +18,11 @@ interface Props {
   placeholder?: string;
   disabled?: boolean;
   style?: StyleProp<ViewStyle>;
+  error?: string;
 }
 
 const Textarea: FC<Props> = (props) => {
-  const { onChange, value, disabled, placeholder, onBlur, style } = props;
+  const { onChange, value, disabled, placeholder, onBlur, style, error } = props;
 
   return (
     <View style={style}>
@@ -35,6 +37,7 @@ const Textarea: FC<Props> = (props) => {
         multiline
         numberOfLines={4}
       />
+      {!!error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 };
@@ -51,6 +54,13 @@ const styles = StyleSheet.create({
     lineHeight: lineHeights.m,
     color: colors.text.primary,
     textAlignVertical: 'top',
+  },
+  error: {
+    color: colors.primary,
+    fontSize: fontSizes.s,
+    lineHeight: lineHeights.s,
+    fontFamily: fonts.secondary.regular,
+    marginTop: sizes.xxxs,
   },
 });
 

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, StackNavigationOptions } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { drawerNavigator, notificationRoute, placeRoute } from './types';
 import { Place } from '@features/places/types';
@@ -7,11 +7,10 @@ import DrawerNavigator from './DrawerNavigator';
 import { PlaceScreen } from '@features/places/screens';
 import { NotificationScreen } from '@features/notifications/screens';
 import { Notification } from '@features/notifications/types';
-import { headerBackTitleStyle, headerStyle } from '@styles/styles';
-import { Image, ImageStyle, StyleProp } from 'react-native';
+import { headerLeftContainerStyle, headerRightContainerStyle, headerStyle } from './styles';
+import { ImageStyle, StyleProp } from 'react-native';
 import { sizes } from '@styles/constants';
-
-const backIcon = require('@assets/images/back.png');
+import { BackButton, Language } from './components';
 
 export type RootStackParamList = {
   [placeRoute]: { place: Place };
@@ -21,14 +20,15 @@ export type RootStackParamList = {
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
-const screenOptions = {
+const screenOptions: StackNavigationOptions = {
   headerShown: true,
   headerStyle,
-  headerBackTitleStyle,
   headerShadowVisible: false,
-  headerBackTitleVisible: true,
-  headerBackTitle: 'Back',
-  headerBackImage: () => <Image style={headerBackImageStyle} source={backIcon} />,
+  headerRightContainerStyle,
+  headerLeftContainerStyle,
+  title: '',
+  headerRight: () => <Language />,
+  headerLeft: ({ canGoBack }) => (canGoBack ? <BackButton /> : undefined),
 };
 
 const drawerOptions = {
@@ -44,7 +44,15 @@ const RootNavigator: FC = () => {
           name={drawerNavigator}
           component={DrawerNavigator}
         />
-        <RootStack.Screen name={placeRoute} component={PlaceScreen} />
+        <RootStack.Screen
+          options={{
+            headerRight: undefined,
+            headerTransparent: true,
+            headerLeft: () => <BackButton isWhite />,
+          }}
+          name={placeRoute}
+          component={PlaceScreen}
+        />
         <RootStack.Screen name={notificationRoute} component={NotificationScreen} />
       </RootStack.Navigator>
     </NavigationContainer>

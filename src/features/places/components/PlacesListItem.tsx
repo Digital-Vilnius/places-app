@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.xs,
     lineHeight: lineHeights.xs,
     color: colors.text.secondary,
-    fontFamily: fonts.primary.regular,
+    fontFamily: fonts.secondary.regular,
   },
 });
 
