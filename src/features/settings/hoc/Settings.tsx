@@ -13,7 +13,7 @@ import { usagePolicyRoute } from '@navigation/types';
 const Settings: FC = () => {
   const { t } = useTranslation();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-  const { control, save, handleSubmit } = useSettingsForm();
+  const { control, save, handleSubmit, isLoading } = useSettingsForm();
 
   const handleUsagePolicyPress = () => {
     navigation.navigate(usagePolicyRoute);
@@ -21,7 +21,7 @@ const Settings: FC = () => {
 
   return (
     <View style={[flex1, styles.container]}>
-      <SettingsForm control={control} onSave={handleSubmit(save)} />
+      <SettingsForm isLoading={isLoading} control={control} onSave={handleSubmit(save)} />
       <Text onPress={handleUsagePolicyPress} style={styles.link}>
         {t('titles.usage_policy')}
       </Text>

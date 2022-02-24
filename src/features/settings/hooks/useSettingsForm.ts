@@ -6,6 +6,7 @@ import { setIsNotificationsOn } from '@features/settings/slice';
 import { ToastService } from '@core/toast';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
+import { useMutation } from 'react-query';
 import { SettingsFormData } from '../types';
 
 const getSchema = () => {
@@ -28,13 +29,19 @@ const useSettingsForm = () => {
     defaultValues: { lang: locale, isNotificationsOn },
   });
 
-  const save = async (data: SettingsFormData) => {
+  const mutationFn = async (data: SettingsFormData) => {
     dispatch(setIsNotificationsOn({ isNotificationsOn: data.isNotificationsOn }));
     await i18n.changeLanguage(data.lang);
     ToastService.success(t('titles.success'), t('phrases.settings_successfully_updated'));
   };
 
-  return { control, handleSubmit, save };
+  const { mutateAsync, isLoading } = useMutation(mutationFn);
+
+  const save = async (data: SettingsFormData) => {
+    await mutateAsync(data);
+  };
+
+  return { control, handleSubmit, save, isLoading };
 };
 
 export default useSettingsForm;

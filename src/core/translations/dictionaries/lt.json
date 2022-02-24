@@ -38,7 +38,8 @@
   "validations": {
     "field_is_required": "Laukas yra privalomas",
     "field_is_invalid": "Laukas yra nevalidus",
-    "email_is_invalid": "El. paštas yra nevalidus"
+    "email_is_invalid": "El. paštas yra nevalidus",
+    "field_must_be_selected": "Laukas privalo būti pažymėtas"
   }
 }
 

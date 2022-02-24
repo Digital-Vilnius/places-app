@@ -11,6 +11,9 @@ const yupDictionary = (t: TFunction): LocaleObject => {
     string: {
       email: t('validations.email_is_invalid'),
     },
+    boolean: {
+      isValue: t('validations.field_must_be_selected'),
+    },
   };
 };
 

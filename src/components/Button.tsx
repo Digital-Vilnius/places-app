@@ -1,10 +1,19 @@
 import React, { FC } from 'react';
-import { StyleProp, StyleSheet, Text, TextStyle, TouchableOpacity, ViewStyle } from 'react-native';
-import { center } from '@styles/styles';
+import {
+  ActivityIndicator,
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextStyle,
+  TouchableOpacity,
+  ViewStyle,
+} from 'react-native';
+import { center, row } from '@styles/styles';
 import { colors, fonts, fontSizes, lineHeights } from '@styles/constants';
 
 interface Props {
   label: string;
+  isLoading?: boolean;
   disabled?: boolean;
   onPress?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
@@ -12,11 +21,16 @@ interface Props {
 }
 
 const Button: FC<Props> = (props) => {
-  const { onPress, label, containerStyle, labelStyle } = props;
+  const { onPress, label, containerStyle, labelStyle, isLoading } = props;
 
   return (
-    <TouchableOpacity style={[center, styles.container, containerStyle]} onPress={onPress}>
-      <Text style={[styles.label, labelStyle]}>{label}</Text>
+    <TouchableOpacity
+      disabled={isLoading}
+      style={[center, styles.container, row, containerStyle]}
+      onPress={onPress}
+    >
+      {!isLoading && <Text style={[styles.label, labelStyle]}>{label}</Text>}
+      {isLoading && <ActivityIndicator color={colors.white} />}
     </TouchableOpacity>
   );
 };
@@ -26,6 +40,7 @@ const styles = StyleSheet.create({
     height: 48,
     borderRadius: 24,
     backgroundColor: colors.button.primary,
+    position: 'relative',
   },
   label: {
     fontSize: fontSizes.m,

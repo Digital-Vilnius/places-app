@@ -7,7 +7,9 @@ import { Provider } from 'react-redux';
 import RootNavigator from '@navigation/RootNavigator';
 import Toast from 'react-native-toast-message';
 import { setupTranslations } from '@core/translations';
+import { setupNotifications } from '@core/notifications';
 
+setupNotifications();
 setupTranslations();
 
 const App: FC = () => {

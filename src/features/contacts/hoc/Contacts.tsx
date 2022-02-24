@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next';
 import { useContactsForm } from '../hooks';
 
 const Contacts: FC = () => {
-  const { control, save, handleSubmit } = useContactsForm();
+  const { control, save, handleSubmit, isLoading } = useContactsForm();
   const { t } = useTranslation();
 
   return (
     <ScrollView contentContainerStyle={[styles.container, flex1]}>
       <Text style={[styles.description, bottomSpacings.xl1]}>{t('phrases.contacts_help')}</Text>
-      <ContactsForm control={control} save={handleSubmit(save)} />
+      <ContactsForm isLoading={isLoading} control={control} save={handleSubmit(save)} />
     </ScrollView>
   );
 };

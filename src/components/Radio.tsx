@@ -20,10 +20,11 @@ interface Props {
   disabled?: boolean;
   label?: string;
   style?: StyleProp<ViewStyle>;
+  error?: string;
 }
 
 const Radio: FC<Props> = (props) => {
-  const { checked, onChange, disabled, style, label } = props;
+  const { checked, onChange, disabled, style, label, error } = props;
 
   const handleOnPress = () => {
     if (!onChange) return;
@@ -33,20 +34,19 @@ const Radio: FC<Props> = (props) => {
   const borderColor = checked ? colors.grey.light : hexToRgba(colors.text.primary, 0.2);
 
   return (
-    <TouchableOpacity
-      style={[style, row, styles.container]}
-      disabled={disabled}
-      onPress={handleOnPress}
-    >
-      <View style={[styles.checkContainer, { borderColor }]}>
-        {checked && (
-          <View style={[center, styles.check]}>
-            <Image source={check} />
-          </View>
-        )}
-      </View>
-      {!!label && <Text style={[styles.label, flex1]}>{label}</Text>}
-    </TouchableOpacity>
+    <View style={style}>
+      <TouchableOpacity style={[row, styles.container]} disabled={disabled} onPress={handleOnPress}>
+        <View style={[styles.checkContainer, { borderColor }]}>
+          {checked && (
+            <View style={[center, styles.check]}>
+              <Image source={check} />
+            </View>
+          )}
+        </View>
+        {!!label && <Text style={[styles.label, flex1]}>{label}</Text>}
+      </TouchableOpacity>
+      {!!error && <Text style={styles.error}>{error}</Text>}
+    </View>
   );
 };
 
@@ -72,6 +72,13 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.s,
     lineHeight: lineHeights.s,
     color: colors.text.primary,
+  },
+  error: {
+    color: colors.primary,
+    fontSize: fontSizes.s,
+    lineHeight: lineHeights.s,
+    fontFamily: fonts.secondary.regular,
+    marginTop: sizes.xxxs,
   },
 });
 

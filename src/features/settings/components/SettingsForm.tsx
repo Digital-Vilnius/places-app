@@ -9,11 +9,12 @@ import { useTranslation } from 'react-i18next';
 
 interface Props {
   control: Control<SettingsFormData>;
+  isLoading: boolean;
   onSave: () => void;
 }
 
 const SettingsForm: FC<Props> = (props) => {
-  const { onSave, control } = props;
+  const { onSave, control, isLoading } = props;
   const { t } = useTranslation();
 
   return (
@@ -44,7 +45,7 @@ const SettingsForm: FC<Props> = (props) => {
           />
         </View>
       </Section>
-      <Button onPress={onSave} label={t('buttons.update_settings')} />
+      <Button isLoading={isLoading} onPress={onSave} label={t('buttons.update_settings')} />
     </View>
   );
 };

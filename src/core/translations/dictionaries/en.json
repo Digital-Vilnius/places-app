@@ -38,7 +38,8 @@
   "validations": {
     "field_is_required": "Field is required",
     "field_is_invalid": "Field is invalid",
-    "email_is_invalid": "Email is invalid"
+    "email_is_invalid": "Email is invalid",
+    "field_must_be_selected": "Field must be selected"
   }
 }
 

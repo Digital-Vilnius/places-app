@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, Image, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { flex1, row } from '@styles/styles';
 import {
   borderRadius,
@@ -32,6 +32,8 @@ interface Props {
 
 const Place: FC<Props> = (props) => {
   const { place } = props;
+  const { phone, email, locationAddressUrl } = place;
+
   const { t } = useTranslation();
 
   const initialRegion: Region = {
@@ -83,21 +85,31 @@ const Place: FC<Props> = (props) => {
           contentStyle={styles.section}
           title={t('titles.contacts')}
         >
-          <View style={row}>
-            <Image source={phoneIcon} />
-            <Text style={styles.contact}>{place.phone}</Text>
-          </View>
-          {!!place.email && (
-            <View style={[row, topSpacings.m]}>
-              <Image source={emailIcon} />
-              <Text style={styles.contact}>{place.email}</Text>
+          {!!phone && (
+            <View style={row}>
+              <Image source={phoneIcon} />
+              <Text onPress={() => Linking.openURL(`tel:${phone}`)} style={styles.contact}>
+                {phone}
+              </Text>
             </View>
           )}
-          {!!place.locationAddressUrl && (
+          {!!email && (
+            <View style={[row, topSpacings.m]}>
+              <Image source={emailIcon} />
+              <Text onPress={() => Linking.openURL(`mailto:${email}`)} style={styles.contact}>
+                {email}
+              </Text>
+            </View>
+          )}
+          {!!locationAddressUrl && (
             <View style={[row, topSpacings.m]}>
               <Image source={globeIcon} />
-              <Text numberOfLines={1} style={styles.contact}>
-                {place.locationAddressUrl}
+              <Text
+                onPress={() => Linking.openURL(locationAddressUrl)}
+                numberOfLines={1}
+                style={styles.contact}
+              >
+                {locationAddressUrl}
               </Text>
             </View>
           )}
@@ -121,7 +133,16 @@ const Place: FC<Props> = (props) => {
         )}
         <View>
           <Text style={styles.sectionTitle}>{t('titles.address')}</Text>
-          <Text style={[styles.link, bottomSpacings.m]}>{place.address}</Text>
+          <Text
+            onPress={() =>
+              Linking.openURL(
+                `https://maps.google.com/maps?ll=${place.coordinates.latitude},${place.coordinates.longitude}&q=${place.coordinates.latitude},${place.coordinates.longitude}`
+              )
+            }
+            style={[styles.link, bottomSpacings.m]}
+          >
+            {place.address}
+          </Text>
           <View style={styles.mapContainer}>
             <MapView initialRegion={initialRegion} scrollEnabled={false} style={flex1}>
               <Marker coordinate={place.coordinates} image={{ uri: place.icon }} />

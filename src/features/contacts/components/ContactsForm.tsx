@@ -9,10 +9,11 @@ import { useTranslation } from 'react-i18next';
 interface Props {
   control: Control<ContactsFormData>;
   save: () => void;
+  isLoading: boolean;
 }
 
 const ContactsForm: FC<Props> = (props) => {
-  const { save, control } = props;
+  const { save, control, isLoading } = props;
   const { t } = useTranslation();
 
   return (
@@ -77,16 +78,17 @@ const ContactsForm: FC<Props> = (props) => {
       <Controller
         control={control}
         name="marketingAgreement"
-        render={({ field }) => (
+        render={({ field, fieldState: { error } }) => (
           <Radio
             label={t('phrases.contacts_agreement')}
             style={bottomSpacings.xl}
             onChange={field.onChange}
             checked={field.value}
+            error={error?.message}
           />
         )}
       />
-      <Button label={t('buttons.send')} onPress={save} />
+      <Button isLoading={isLoading} label={t('buttons.send')} onPress={save} />
     </View>
   );
 };

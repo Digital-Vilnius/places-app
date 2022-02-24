@@ -5,7 +5,7 @@ export interface Place {
   place_icon: string;
   place_images: string[];
   place_description: string;
-  place_phone: string;
+  place_phone: string | null;
   place_timetable: TimetableItem[];
   place_locationAddressUrl: string | null;
   coordinate: Coordinates;
