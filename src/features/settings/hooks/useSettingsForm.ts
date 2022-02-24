@@ -1,12 +1,12 @@
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
-import { SettingsFormData } from '../types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useAppDispatch, useAppSelector } from '@core/store';
 import { setIsNotificationsOn } from '@features/settings/slice';
 import { ToastService } from '@core/toast';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
+import { SettingsFormData } from '../types';
 
 const getSchema = () => {
   return yup

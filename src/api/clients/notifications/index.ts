@@ -1,6 +1,6 @@
 import { Request, ResultResponse } from '@api/types';
-import httpClient from '../../httpClient';
 import { Notification } from './types';
+import httpClient from '../../httpClient';
 
 const baseUrl = '/notifications';
 

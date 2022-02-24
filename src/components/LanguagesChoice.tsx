@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Radio from './Radio';
 import { LanguagesUtils } from '@utils';
 import { flex1, row, spaceBetween } from '@styles/styles';
 import { colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
+import Radio from './Radio';
 
 interface Props {
   onChange: (value: string) => void;

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { usePlaces } from '@features/places/hooks';
-import { Places as ControlledPlaces } from '../components';
 import { useNavigation } from '@react-navigation/native';
-import { Place } from '../types';
 import { placeRoute } from '@navigation/types';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '@navigation/RootNavigator';
+import { Place } from '../types';
+import { Places as ControlledPlaces } from '../components';
 
 const Places: FC = () => {
   const { places, isLoading, isRefetching, refetch } = usePlaces();

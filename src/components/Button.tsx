@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { TouchableOpacity, StyleSheet, Text, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import { StyleProp, StyleSheet, Text, TextStyle, TouchableOpacity, ViewStyle } from 'react-native';
 import { center } from '@styles/styles';
 import { colors, fonts, fontSizes, lineHeights } from '@styles/constants';
 

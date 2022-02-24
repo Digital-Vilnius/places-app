@@ -1,9 +1,9 @@
-import { Notification as NotificationType } from '../types';
 import React, { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Section } from '@components';
 import { colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 import hexToRgba from 'hex-to-rgba';
+import { Notification as NotificationType } from '../types';
 
 interface Props {
   notification: NotificationType;

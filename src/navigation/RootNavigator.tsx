@@ -1,12 +1,15 @@
 import React, { FC } from 'react';
 import { createStackNavigator, StackNavigationOptions } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { drawerNavigator, notificationRoute, placeRoute, usagePolicyRoute } from './types';
 import { Place } from '@features/places/types';
-import DrawerNavigator from './DrawerNavigator';
 import { PlaceScreen } from '@features/places/screens';
 import { NotificationScreen } from '@features/notifications/screens';
 import { Notification } from '@features/notifications/types';
+import { ImageStyle, StyleProp } from 'react-native';
+import { sizes } from '@styles/constants';
+import { UsagePolicyScreen } from '@features/gdpr/screens';
+import { useTranslation } from 'react-i18next';
+import { BackButton, Language } from './components';
 import {
   headerBackgroundContainerStyle,
   headerLeftContainerStyle,
@@ -14,11 +17,8 @@ import {
   headerStyle,
   headerTitleStyle,
 } from './styles';
-import { ImageStyle, StyleProp } from 'react-native';
-import { sizes } from '@styles/constants';
-import { BackButton, Language } from './components';
-import { UsagePolicyScreen } from '@features/gdpr/screens';
-import { useTranslation } from 'react-i18next';
+import DrawerNavigator from './DrawerNavigator';
+import { drawerNavigator, notificationRoute, placeRoute, usagePolicyRoute } from './types';
 
 export type RootStackParamList = {
   [placeRoute]: { place: Place };

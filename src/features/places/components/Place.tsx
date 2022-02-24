@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Place as PlaceType } from '../types';
 import { flex1, row } from '@styles/styles';
 import {
   borderRadius,
@@ -18,6 +17,7 @@ import hexToRgba from 'hex-to-rgba';
 import Swiper from 'react-native-swiper';
 import ReadMore from '@fawazahmed/react-native-read-more';
 import { useTranslation } from 'react-i18next';
+import { Place as PlaceType } from '../types';
 
 const { width } = Dimensions.get('window');
 const mapHeight = (width - sizes.xs) * 0.33;

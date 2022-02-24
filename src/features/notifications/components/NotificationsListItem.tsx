@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
-import { Notification } from '../types';
 import { Section } from '@components';
 import hexToRgba from 'hex-to-rgba';
+import { Notification } from '../types';
 
 interface Props {
   item: Notification;

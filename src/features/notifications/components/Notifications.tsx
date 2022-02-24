@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
-import { Notification } from '../types';
-import NotificationsListItem from './NotificationsListItem';
 import { ListSeparator } from '@components';
 import { sizes } from '@styles/constants';
-import EmptyList from './EmptyList';
 import { flex1 } from '@styles/styles';
+import EmptyList from './EmptyList';
+import NotificationsListItem from './NotificationsListItem';
+import { Notification } from '../types';
 
 interface Props {
   refreshing: boolean;

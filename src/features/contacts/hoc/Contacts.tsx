@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { ScrollView, StyleSheet, Text } from 'react-native';
 import { flex1 } from '@styles/styles';
-import { useContactsForm } from '../hooks';
 import { ContactsForm } from '@features/contacts/components';
 import { bottomSpacings, colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 import { useTranslation } from 'react-i18next';
+import { useContactsForm } from '../hooks';
 
 const Contacts: FC = () => {
   const { control, save, handleSubmit } = useContactsForm();

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Image, StyleSheet, View, Text } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { center, flex1 } from '@styles/styles';
 import { colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 import hexToRgba from 'hex-to-rgba';

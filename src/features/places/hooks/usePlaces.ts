@@ -1,7 +1,7 @@
 import { PlacesClient } from '@api/clients';
 import { useQuery } from 'react-query';
-import { mapPlace } from '../map';
 import { useAppSelector } from '@core/store';
+import { mapPlace } from '../map';
 
 export const getQueryKey = (locale: string) => {
   return ['places', locale];

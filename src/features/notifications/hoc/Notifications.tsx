@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { Notifications as ControlledNotifications } from '../components';
 import { useNavigation } from '@react-navigation/native';
-import { Notification } from '../types';
 import { notificationRoute } from '@navigation/types';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '@navigation/RootNavigator';
+import { Notification } from '../types';
+import { Notifications as ControlledNotifications } from '../components';
 import { useNotifications } from '../hooks';
 
 const Notifications: FC = () => {

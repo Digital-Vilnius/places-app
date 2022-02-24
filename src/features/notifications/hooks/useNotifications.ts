@@ -1,7 +1,7 @@
 import { NotificationsClient } from '@api/clients';
 import { useQuery } from 'react-query';
-import { mapNotification } from '../map';
 import { useAppSelector } from '@core/store';
+import { mapNotification } from '../map';
 
 export const getQueryKey = (locale: string) => {
   return ['notifications', locale];

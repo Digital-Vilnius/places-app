@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Place } from '@features/places/types';
-import { Image, StyleSheet, Text, TouchableOpacity, Dimensions } from 'react-native';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { borderRadius, colors, fonts, fontSizes, lineHeights, sizes } from '@styles/constants';
 
 const { width } = Dimensions.get('window');

@@ -1,14 +1,14 @@
 import i18n, { LanguageDetectorAsyncModule } from 'i18next';
 import * as yup from 'yup';
 import { initReactI18next } from 'react-i18next';
+import { store } from '@core/store';
+import { setIsLocaleInit, setLocale as setUserLocale } from '@features/settings/slice';
+import { NativeModules, Platform } from 'react-native';
 import enDictionary from './dictionaries/en.json';
 import ruDictionary from './dictionaries/ru.json';
 import ltDictionary from './dictionaries/lt.json';
 import yupDictionary from './dictionaries/yupDictionary';
 import { Locales } from './constants';
-import { store } from '@core/store';
-import { setLocale as setUserLocale } from '@features/settings/slice';
-import { NativeModules, Platform } from 'react-native';
 
 const resources = {
   [Locales.lt]: { translation: ltDictionary },
@@ -21,8 +21,9 @@ const languageDetector: LanguageDetectorAsyncModule = {
   async: true,
   init: () => {},
   detect: async (callback) => {
-    const locale = store.getState().settings.locale;
-    if (locale) {
+    const { isLocaleInit, locale } = store.getState().settings;
+
+    if (!isLocaleInit) {
       callback(locale);
       return;
     }
@@ -35,6 +36,7 @@ const languageDetector: LanguageDetectorAsyncModule = {
 
     const formattedDeviceLocale = deviceLocale.split('_')[0];
     callback(formattedDeviceLocale);
+    store.dispatch(setIsLocaleInit());
   },
   cacheUserLanguage: async (locale) => {
     store.dispatch(setUserLocale({ locale }));

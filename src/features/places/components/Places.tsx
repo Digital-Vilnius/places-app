@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
-import { Place } from '../types';
-import PlacesListItem from './PlacesListItem';
 import { ListSeparator } from '@components';
 import { sizes } from '@styles/constants';
+import PlacesListItem from './PlacesListItem';
+import { Place } from '../types';
 
 interface Props {
   refreshing: boolean;
