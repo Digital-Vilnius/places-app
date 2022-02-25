@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   container: {
     padding: sizes.xs,
     justifyContent: 'space-between',
-    paddingBottom: sizes.xl,
+    paddingBottom: sizes.m,
   },
   link: {
     fontSize: fontSizes.s,

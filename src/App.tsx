@@ -8,20 +8,23 @@ import RootNavigator from '@navigation/RootNavigator';
 import Toast from 'react-native-toast-message';
 import { setupTranslations } from '@core/translations';
 import { setupNotifications } from '@core/notifications';
+import { Platform } from 'react-native';
 
 setupNotifications();
 setupTranslations();
 
 const App: FC = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <RootNavigator />
-          <Toast topOffset={20} />
-        </PersistGate>
-      </Provider>
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <RootNavigator />
+          </PersistGate>
+        </Provider>
+      </QueryClientProvider>
+      <Toast topOffset={Platform.OS === 'android' ? 20 : 40} />
+    </>
   );
 };
 

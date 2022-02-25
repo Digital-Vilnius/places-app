@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { DrawerContentComponentProps } from '@react-navigation/drawer/src/types';
 import {
   aboutProjectRoute,
@@ -22,32 +22,34 @@ const Drawer: FC<DrawerContentComponentProps> = (props) => {
 
   return (
     <View style={flex1}>
-      <View style={[center, styles.header]}>
-        <TouchableOpacity style={styles.closeIcon} onPress={navigation.closeDrawer}>
-          <Image source={closeIcon} />
-        </TouchableOpacity>
-        <Image source={logo} />
-      </View>
-      <View style={[flex1, styles.items]}>
-        <Text onPress={() => navigation.navigate(mapRoute)} style={styles.item}>
-          {t('titles.map')}
-        </Text>
-        <Text onPress={() => navigation.navigate(placesRoute)} style={styles.item}>
-          {t('titles.discover')}
-        </Text>
-        <Text onPress={() => navigation.navigate(notificationsRoute)} style={styles.item}>
-          {t('titles.notifications')}
-        </Text>
-        <Text onPress={() => navigation.navigate(aboutProjectRoute)} style={styles.item}>
-          {t('titles.about_project')}
-        </Text>
-        <Text onPress={() => navigation.navigate(contactsRoute)} style={styles.item}>
-          {t('titles.contact_us')}
-        </Text>
-        <Text onPress={() => navigation.navigate(settingsRoute)} style={styles.item}>
-          {t('titles.settings')}
-        </Text>
-      </View>
+      <SafeAreaView style={flex1}>
+        <View style={[center, styles.header]}>
+          <TouchableOpacity style={styles.closeIcon} onPress={navigation.closeDrawer}>
+            <Image source={closeIcon} />
+          </TouchableOpacity>
+          <Image source={logo} />
+        </View>
+        <View style={[flex1, styles.items]}>
+          <Text onPress={() => navigation.navigate(mapRoute)} style={styles.item}>
+            {t('titles.map')}
+          </Text>
+          <Text onPress={() => navigation.navigate(placesRoute)} style={styles.item}>
+            {t('titles.discover')}
+          </Text>
+          <Text onPress={() => navigation.navigate(notificationsRoute)} style={styles.item}>
+            {t('titles.notifications')}
+          </Text>
+          <Text onPress={() => navigation.navigate(aboutProjectRoute)} style={styles.item}>
+            {t('titles.about_project')}
+          </Text>
+          <Text onPress={() => navigation.navigate(contactsRoute)} style={styles.item}>
+            {t('titles.contact_us')}
+          </Text>
+          <Text onPress={() => navigation.navigate(settingsRoute)} style={styles.item}>
+            {t('titles.settings')}
+          </Text>
+        </View>
+      </SafeAreaView>
     </View>
   );
 };
