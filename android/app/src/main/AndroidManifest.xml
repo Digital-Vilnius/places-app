@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.redesign">
+          package="com.heritage_4_life">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 

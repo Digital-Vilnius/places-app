@@ -1,4 +1,4 @@
-package com.redesign;
+package com.heritage_4_life;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "redesign";
+    return "heritage_4_life";
   }
 
   @Override

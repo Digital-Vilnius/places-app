@@ -32,3 +32,7 @@ export const headerLeftContainerStyle: StyleProp<ViewStyle> = {
 export const headerBackgroundContainerStyle: StyleProp<ViewStyle> = {
   backgroundColor: hexToRgba(colors.transparentHeaderBackground, 0.2),
 };
+
+export const cardStyle: StyleProp<ViewStyle> = {
+  backgroundColor: colors.background,
+};

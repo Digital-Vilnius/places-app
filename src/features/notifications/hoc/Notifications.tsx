@@ -8,7 +8,7 @@ import { Notifications as ControlledNotifications } from '../components';
 import { useNotifications } from '../hooks';
 
 const Notifications: FC = () => {
-  const { notifications, isLoading, isRefetching, refetch } = useNotifications();
+  const { notifications, isRefetching, refetch } = useNotifications();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   const handlePlacePress = (notification: Notification) => {
@@ -20,7 +20,7 @@ const Notifications: FC = () => {
       onRefresh={refetch}
       onNotificationPress={handlePlacePress}
       notifications={notifications}
-      refreshing={isLoading || isRefetching}
+      refreshing={isRefetching}
     />
   );
 };

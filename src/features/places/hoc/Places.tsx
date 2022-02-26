@@ -8,7 +8,7 @@ import { Place } from '../types';
 import { Places as ControlledPlaces } from '../components';
 
 const Places: FC = () => {
-  const { places, isLoading, isRefetching, refetch } = usePlaces();
+  const { places, isRefetching, refetch } = usePlaces();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   const handlePlacePress = (place: Place) => {
@@ -20,7 +20,7 @@ const Places: FC = () => {
       onRefresh={refetch}
       onPlacePress={handlePlacePress}
       places={places}
-      refreshing={isLoading || isRefetching}
+      refreshing={isRefetching}
     />
   );
 };

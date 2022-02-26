@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import { useAppSelector } from '@core/store';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-import { DrawerParamList } from '../DrawerNavigator';
-import { settingsRoute } from '../types';
 import { Image, TouchableOpacity } from 'react-native';
 import { LanguagesUtils } from '@utils';
+import { DrawerParamList } from '../DrawerNavigator';
+import { settingsRoute } from '../types';
 
 const Language: FC = () => {
   const { locale } = useAppSelector((state) => state.settings);

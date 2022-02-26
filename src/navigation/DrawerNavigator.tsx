@@ -1,5 +1,21 @@
 import React, { FC } from 'react';
 import { createDrawerNavigator, DrawerNavigationOptions } from '@react-navigation/drawer';
+import { PlacesScreen } from '@features/places/screens';
+import { SettingsScreen } from '@features/settings/screens';
+import { ContactsScreen } from '@features/contacts/screens';
+import { AboutProjectScreen } from '@features/about/screens';
+import { NotificationsScreen } from '@features/notifications/screens';
+import { Notification } from '@features/notifications/types';
+import { MapScreen } from '@features/map/screens';
+import { useTranslation } from 'react-i18next';
+import {
+  drawerStyle,
+  headerLeftContainerStyle,
+  headerRightContainerStyle,
+  headerStyle,
+  headerTitleStyle,
+} from './styles';
+import { Drawer, DrawerToggleButton, Language, LogoTitle } from './components';
 import {
   aboutProjectRoute,
   contactsRoute,
@@ -9,22 +25,6 @@ import {
   placesRoute,
   settingsRoute,
 } from './types';
-import { PlacesScreen } from '@features/places/screens';
-import { SettingsScreen } from '@features/settings/screens';
-import { ContactsScreen } from '@features/contacts/screens';
-import { AboutProjectScreen } from '@features/about/screens';
-import { NotificationsScreen } from '@features/notifications/screens';
-import { Notification } from '@features/notifications/types';
-import {
-  drawerStyle,
-  headerLeftContainerStyle,
-  headerRightContainerStyle,
-  headerStyle,
-  headerTitleStyle,
-} from './styles';
-import { MapScreen } from '@features/map/screens';
-import { Language, Drawer, DrawerToggleButton, LogoTitle } from './components';
-import { useTranslation } from 'react-i18next';
 
 export type DrawerParamList = {
   [placesRoute]: undefined;

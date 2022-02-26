@@ -5,12 +5,12 @@ import { AboutProject as ControlledAboutProject } from '../components';
 import { useAboutContent } from '../hooks';
 
 const AboutProject: FC = () => {
-  const { content, refetch, isRefetching, isLoading } = useAboutContent();
+  const { content, refetch, isRefetching } = useAboutContent();
 
   return (
     <ScrollView
       contentContainerStyle={styles.content}
-      refreshControl={<RefreshControl refreshing={isRefetching || isLoading} onRefresh={refetch} />}
+      refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={refetch} />}
     >
       {!!content && <ControlledAboutProject content={content} />}
     </ScrollView>

@@ -11,6 +11,7 @@ import { UsagePolicyScreen } from '@features/gdpr/screens';
 import { useTranslation } from 'react-i18next';
 import { BackButton, Language } from './components';
 import {
+  cardStyle,
   headerBackgroundContainerStyle,
   headerLeftContainerStyle,
   headerRightContainerStyle,
@@ -38,6 +39,7 @@ const screenOptions: StackNavigationOptions = {
   title: '',
   headerTitleAlign: 'center',
   headerTitleStyle,
+  cardStyle,
   headerRight: () => <Language />,
   headerLeft: ({ canGoBack }) => (canGoBack ? <BackButton /> : undefined),
 };

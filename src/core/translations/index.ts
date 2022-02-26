@@ -23,7 +23,7 @@ const languageDetector: LanguageDetectorAsyncModule = {
   detect: async (callback) => {
     const { isLocaleInit, locale } = store.getState().settings;
 
-    if (!isLocaleInit) {
+    if (isLocaleInit) {
       callback(locale);
       return;
     }
