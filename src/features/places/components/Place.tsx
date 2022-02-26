@@ -1,5 +1,14 @@
 import React, { FC } from 'react';
-import { Dimensions, Image, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  Dimensions,
+  Image,
+  Linking,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import { flex1, row } from '@styles/styles';
 import {
   borderRadius,
@@ -59,96 +68,98 @@ const Place: FC<Props> = (props) => {
         ))}
       </Swiper>
       <View style={styles.content}>
-        <View style={[row, bottomSpacings.l]}>
-          <Image style={styles.icon} source={{ uri: place.icon }} />
-          <View style={flex1}>
-            <Text style={styles.title}>{place.title}</Text>
-            <Text style={styles.type}>{place.type}</Text>
+        <SafeAreaView style={flex1}>
+          <View style={[row, bottomSpacings.l]}>
+            <Image style={styles.icon} source={{ uri: place.icon }} />
+            <View style={flex1}>
+              <Text style={styles.title}>{place.title}</Text>
+              <Text style={styles.type}>{place.type}</Text>
+            </View>
           </View>
-        </View>
-        <View style={bottomSpacings.l}>
-          <Text style={styles.sectionTitle}>{t('titles.about_place')}</Text>
-          <ReadMore
-            seeLessText={t('buttons.read_less')}
-            seeMoreText={t('buttons.read_more')}
-            seeLessStyle={styles.descriptionToggle}
-            seeMoreStyle={styles.descriptionToggle}
-            seeMoreContainerStyleSecondary={{}}
-            numberOfLines={4}
-            style={styles.description}
-          >
-            {place.description}
-          </ReadMore>
-        </View>
-        <Section
-          style={bottomSpacings.l}
-          contentStyle={styles.section}
-          title={t('titles.contacts')}
-        >
-          {!!phone && (
-            <View style={row}>
-              <Image source={phoneIcon} />
-              <Text onPress={() => Linking.openURL(`tel:${phone}`)} style={styles.contact}>
-                {phone}
-              </Text>
-            </View>
-          )}
-          {!!email && (
-            <View style={[row, topSpacings.m]}>
-              <Image source={emailIcon} />
-              <Text onPress={() => Linking.openURL(`mailto:${email}`)} style={styles.contact}>
-                {email}
-              </Text>
-            </View>
-          )}
-          {!!locationAddressUrl && (
-            <View style={[row, topSpacings.m]}>
-              <Image source={globeIcon} />
-              <Text
-                onPress={() => Linking.openURL(locationAddressUrl)}
-                numberOfLines={1}
-                style={styles.contact}
-              >
-                {locationAddressUrl}
-              </Text>
-            </View>
-          )}
-        </Section>
-        {place.timetable.length > 0 && (
+          <View style={bottomSpacings.l}>
+            <Text style={styles.sectionTitle}>{t('titles.about_place')}</Text>
+            <ReadMore
+              seeLessText={t('buttons.read_less')}
+              seeMoreText={t('buttons.read_more')}
+              seeLessStyle={styles.descriptionToggle}
+              seeMoreStyle={styles.descriptionToggle}
+              seeMoreContainerStyleSecondary={{}}
+              numberOfLines={4}
+              style={styles.description}
+            >
+              {place.description}
+            </ReadMore>
+          </View>
           <Section
             style={bottomSpacings.l}
             contentStyle={styles.section}
-            title={t('titles.visiting_hours')}
+            title={t('titles.contacts')}
           >
-            {place.timetable.map((item, index) => (
-              <Text
-                key={item.days}
-                style={[
-                  styles.hours,
-                  index === place.timetable.length - 1 ? undefined : bottomSpacings.m,
-                ]}
-              >{`${item.days}: ${item.time}`}</Text>
-            ))}
+            {!!phone && (
+              <View style={row}>
+                <Image source={phoneIcon} />
+                <Text onPress={() => Linking.openURL(`tel:${phone}`)} style={styles.contact}>
+                  {phone}
+                </Text>
+              </View>
+            )}
+            {!!email && (
+              <View style={[row, topSpacings.m]}>
+                <Image source={emailIcon} />
+                <Text onPress={() => Linking.openURL(`mailto:${email}`)} style={styles.contact}>
+                  {email}
+                </Text>
+              </View>
+            )}
+            {!!locationAddressUrl && (
+              <View style={[row, topSpacings.m]}>
+                <Image source={globeIcon} />
+                <Text
+                  onPress={() => Linking.openURL(locationAddressUrl)}
+                  numberOfLines={1}
+                  style={styles.contact}
+                >
+                  {locationAddressUrl}
+                </Text>
+              </View>
+            )}
           </Section>
-        )}
-        <View>
-          <Text style={styles.sectionTitle}>{t('titles.address')}</Text>
-          <Text
-            onPress={() =>
-              Linking.openURL(
-                `https://maps.google.com/maps?ll=${place.coordinates.latitude},${place.coordinates.longitude}&q=${place.coordinates.latitude},${place.coordinates.longitude}`
-              )
-            }
-            style={[styles.link, bottomSpacings.m]}
-          >
-            {place.address}
-          </Text>
-          <View style={styles.mapContainer}>
-            <MapView initialRegion={initialRegion} scrollEnabled={false} style={flex1}>
-              <Marker coordinate={place.coordinates} image={{ uri: place.icon }} />
-            </MapView>
+          {place.timetable.length > 0 && (
+            <Section
+              style={bottomSpacings.l}
+              contentStyle={styles.section}
+              title={t('titles.visiting_hours')}
+            >
+              {place.timetable.map((item, index) => (
+                <Text
+                  key={item.days}
+                  style={[
+                    styles.hours,
+                    index === place.timetable.length - 1 ? undefined : bottomSpacings.m,
+                  ]}
+                >{`${item.days}: ${item.time}`}</Text>
+              ))}
+            </Section>
+          )}
+          <View>
+            <Text style={styles.sectionTitle}>{t('titles.address')}</Text>
+            <Text
+              onPress={() =>
+                Linking.openURL(
+                  `https://maps.google.com/maps?ll=${place.coordinates.latitude},${place.coordinates.longitude}&q=${place.coordinates.latitude},${place.coordinates.longitude}`
+                )
+              }
+              style={[styles.link, bottomSpacings.m]}
+            >
+              {place.address}
+            </Text>
+            <View style={styles.mapContainer}>
+              <MapView initialRegion={initialRegion} scrollEnabled={false} style={flex1}>
+                <Marker coordinate={place.coordinates} image={{ uri: place.icon }} />
+              </MapView>
+            </View>
           </View>
-        </View>
+        </SafeAreaView>
       </View>
     </ScrollView>
   );

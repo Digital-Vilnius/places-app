@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { ScreenContainer } from '@components';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParamList } from '@navigation/RootNavigator';
 import { PlaceRoute } from '@navigation/types';
@@ -10,11 +9,7 @@ const PlaceScreen: FC<StackScreenProps<RootStackParamList, PlaceRoute>> = (props
   const { params } = route;
   const { place } = params;
 
-  return (
-    <ScreenContainer>
-      <Place place={place} />
-    </ScreenContainer>
-  );
+  return <Place place={place} />;
 };
 
 export default PlaceScreen;
