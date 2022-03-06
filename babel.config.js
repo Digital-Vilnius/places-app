@@ -12,17 +12,17 @@ module.exports = {
           '@features': './src/features',
           '@navigation': './src/navigation',
           '@styles': './src/styles',
-          '@utils': './src/utils'
-        }
-      }
+          '@utils': './src/utils',
+        },
+      },
     ],
     [
       'module:react-native-dotenv',
       {
         moduleName: '@env',
-        path: '.env'
-      }
+        path: '.env',
+      },
     ],
-    'react-native-reanimated/plugin'
-  ]
+    'react-native-reanimated/plugin',
+  ],
 };
