@@ -30,8 +30,10 @@ static void InitializeFlipper(UIApplication *application) {
 {
   [GMSServices provideAPIKey:@"AIzaSyCEkBZYaO2jMCuPF00QsIkmpyNbKcILS-k"];
 
-  #ifdef FB_SONARKIT_ENABLED
-    InitializeFlipper(application);
+  #if DEBUG
+    #ifdef FB_SONARKIT_ENABLED
+      InitializeFlipper(application);
+    #endif
   #endif
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
