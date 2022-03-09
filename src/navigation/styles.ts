@@ -4,13 +4,6 @@ import hexToRgba from 'hex-to-rgba';
 
 export const headerStyle: StyleProp<ViewStyle> = {
   backgroundColor: colors.background,
-  height: 80,
-  elevation: 0,
-  shadowOpacity: 0,
-};
-
-export const transparentHeaderStyle: StyleProp<ViewStyle> = {
-  backgroundColor: colors.background,
   elevation: 0,
   shadowOpacity: 0,
 };
