@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { ScreenContainer } from '@components';
+import { SafeAreaScreenContainer } from '@components';
 import { Contacts } from '../hoc';
 
 const ContactsScreen: FC = () => {
   return (
-    <ScreenContainer>
+    <SafeAreaScreenContainer>
       <Contacts />
-    </ScreenContainer>
+    </SafeAreaScreenContainer>
   );
 };
 

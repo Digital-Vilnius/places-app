@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ScreenContainer } from '@components';
+import { SafeAreaScreenContainer } from '@components';
 import { StackScreenProps } from '@react-navigation/stack';
 import { NotificationRoute } from '@navigation/types';
 import { RootStackParamList } from '@navigation/RootNavigator';
@@ -11,9 +11,9 @@ const NotificationScreen: FC<StackScreenProps<RootStackParamList, NotificationRo
   const { notification } = params;
 
   return (
-    <ScreenContainer>
+    <SafeAreaScreenContainer>
       <Notification notification={notification} />
-    </ScreenContainer>
+    </SafeAreaScreenContainer>
   );
 };
 

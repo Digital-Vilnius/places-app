@@ -1,8 +1,13 @@
 import React, { FC } from 'react';
+import { ScreenContainer } from '@components';
 import { Map } from '../hoc';
 
 const MapScreen: FC = () => {
-  return <Map />;
+  return (
+    <ScreenContainer>
+      <Map />
+    </ScreenContainer>
+  );
 };
 
 export default MapScreen;

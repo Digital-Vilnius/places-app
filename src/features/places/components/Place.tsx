@@ -234,6 +234,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     height: mapHeight,
     borderRadius: borderRadius.s,
+    marginBottom: sizes.m,
   },
   icon: {
     width: 42,

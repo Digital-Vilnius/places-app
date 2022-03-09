@@ -15,7 +15,7 @@ import {
   headerStyle,
   headerTitleStyle,
 } from './styles';
-import { Drawer, DrawerToggleButton, Language, LogoTitle } from './components';
+import { Drawer, DrawerOpenButton, Language, LogoTitle } from './components';
 import {
   aboutProjectRoute,
   contactsRoute,
@@ -47,7 +47,7 @@ const screenOptions: DrawerNavigationOptions = {
   headerShadowVisible: false,
   headerTitleAlign: 'center',
   headerRight: () => <Language />,
-  headerLeft: () => <DrawerToggleButton />,
+  headerLeft: () => <DrawerOpenButton />,
 };
 
 const DrawerNavigator: FC = () => {

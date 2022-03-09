@@ -17,6 +17,7 @@ import {
   headerRightContainerStyle,
   headerStyle,
   headerTitleStyle,
+  transparentHeaderStyle,
 } from './styles';
 import DrawerNavigator from './DrawerNavigator';
 import { drawerNavigator, notificationRoute, placeRoute, usagePolicyRoute } from './types';
@@ -64,6 +65,7 @@ const RootNavigator: FC = () => {
             headerRight: undefined,
             headerTransparent: true,
             headerBackgroundContainerStyle,
+            headerStyle: transparentHeaderStyle,
             headerLeft: () => <BackButton isWhite />,
           }}
           name={placeRoute}

@@ -1,5 +1,5 @@
 import Button from './Button';
-import ScreenContainer from './ScreenContainer';
+import SafeAreaScreenContainer from './SafeAreaScreenContainer';
 import ListSeparator from './ListSeparator';
 import Section from './Section';
 import Switch from './Switch';
@@ -7,10 +7,11 @@ import Radio from './Radio';
 import LanguagesChoice from './LanguagesChoice';
 import Input from './Input';
 import Textarea from './Textarea';
+import ScreenContainer from './ScreenContainer';
 
 export {
   Button,
-  ScreenContainer,
+  SafeAreaScreenContainer,
   ListSeparator,
   Section,
   Switch,
@@ -18,4 +19,5 @@ export {
   LanguagesChoice,
   Input,
   Textarea,
+  ScreenContainer,
 };
