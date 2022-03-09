@@ -16,8 +16,8 @@ class NotificationService: UNNotificationServiceExtension {
         if let bestAttemptContent = bestAttemptContent {
             //If your SDK version is < 3.5.0 uncomment and use this code:
             /*
-              OneSignal.didReceiveNotificationExtensionRequest(self.receivedRequest, with: self.bestAttemptContent)
-              contentHandler(bestAttemptContent)
+            OneSignal.didReceiveNotificationExtensionRequest(self.receivedRequest, with: self.bestAttemptContent)
+            contentHandler(bestAttemptContent)
             */
 
             /* DEBUGGING: Uncomment the 2 lines below to check this extension is excuting

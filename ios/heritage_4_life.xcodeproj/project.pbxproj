@@ -11,22 +11,22 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		27554B2FB150227A66F21A67 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA46316B579B5DA114289667 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		2AB0A369263B4669949409AE /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11F5F0BF3E6A48698ED0268F /* OpenSans-SemiBold.ttf */; };
 		2FE0B25EBB414EF280AEF664 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDF4ED11DF824F6DA8542633 /* OpenSans-Bold.ttf */; };
-		4BE4F9A55B5A61401D538770 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F027A6D4159B827201BBB7B /* libPods-OneSignalNotificationServiceExtension.a */; };
-		6172F2D35A4C3AA820D92908 /* libPods-heritage_4_life.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-heritage_4_life.a */; };
 		79B2A36327D608C100343082 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2A36227D608C100343082 /* NotificationService.swift */; };
 		79B2A36727D608C100343082 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 79B2A36027D608C100343082 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C50F65C283D4131B96D82D5 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01F60E1970754B488EF368A1 /* OpenSans-Light.ttf */; };
-		7EF68E3733C33B6898317E18 /* libPods-heritage_4_life-heritage_4_lifeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-heritage_4_life-heritage_4_lifeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8B0CD3BD52584E6AABD4F56C /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E00493E3A7E4BB9B58CAF06 /* Merriweather-Light.ttf */; };
 		A2CC269069CD4813BACBEA52 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 483C7E0FEB15425982C83007 /* Merriweather-Black.ttf */; };
 		A98DB2F8515D482589F7BD1B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9125ABB4B297413DA99C32A4 /* OpenSans-Regular.ttf */; };
 		AA6846741BD84F859BDCB31E /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E28E80506C1A46079F128F55 /* Merriweather-Bold.ttf */; };
+		ADE15F4C2D1CADD7B526A624 /* libPods-heritage_4_life-heritage_4_lifeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6921941E9BB2155238BE426 /* libPods-heritage_4_life-heritage_4_lifeTests.a */; };
 		B7D9C55417594B1280DE7E63 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6E6379E25BF4BA39968A5BD /* OpenSans-ExtraBold.ttf */; };
 		B95001D1C8E342F0BC79031A /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4BBBEBB678B4BF4B1293D0D /* Merriweather-Regular.ttf */; };
 		C85BE9C691E34220900210CB /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C01315E1A0DB4495BDD8AA07 /* OpenSans-Medium.ttf */; };
+		CEF1C8246F33D7D0AA9608D2 /* libPods-heritage_4_life.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A7678F4B5C03132515CDDA /* libPods-heritage_4_life.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* heritage_4_lifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = heritage_4_lifeTests.m; sourceTree = "<group>"; };
 		01F60E1970754B488EF368A1 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Light.ttf"; path = "../assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		068E58F48BB4C41DC006CC16 /* Pods-heritage_4_life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life.debug.xcconfig"; path = "Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life.debug.xcconfig"; sourceTree = "<group>"; };
 		11F5F0BF3E6A48698ED0268F /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* heritage_4_life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heritage_4_life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = heritage_4_life/AppDelegate.h; sourceTree = "<group>"; };
@@ -72,26 +73,25 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = heritage_4_life/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = heritage_4_life/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = heritage_4_life/main.m; sourceTree = "<group>"; };
-		1D0AE47A65C8663E3B452821 /* Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig"; path = "Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A7E69C6FF51658858CC16EA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		1E00493E3A7E4BB9B58CAF06 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Light.ttf"; path = "../assets/fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; };
+		258EC2C38CFD184132CAA596 /* Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig"; path = "Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		39AD1EB44D1D26C3CE092BF5 /* Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig"; path = "Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		483C7E0FEB15425982C83007 /* Merriweather-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Black.ttf"; path = "../assets/fonts/Merriweather-Black.ttf"; sourceTree = "<group>"; };
-		5DD278D701CFE95B5BCAA6EC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		6423831EA8574132BED9D8CC /* libPods-heritage_4_life.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-heritage_4_life.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C97AB639B58BBB4B15BBE30 /* Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig"; path = "Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6F027A6D4159B827201BBB7B /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		679314108AFE6C1FC8AE7D97 /* Pods-heritage_4_life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life.release.xcconfig"; path = "Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life.release.xcconfig"; sourceTree = "<group>"; };
+		7600BCA2EC4C0152F867FB9F /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		79029A2327D609FD00FCE28E /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		79B2A35B27D6086E00343082 /* heritage_4_life.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = heritage_4_life.entitlements; path = heritage_4_life/heritage_4_life.entitlements; sourceTree = "<group>"; };
 		79B2A36027D608C100343082 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B2A36227D608C100343082 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		79B2A36427D608C100343082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = heritage_4_life/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		897346232A9C552CA5750532 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		9125ABB4B297413DA99C32A4 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		ABFE59519B596E51CEFDCCC0 /* libPods-heritage_4_life-heritage_4_lifeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-heritage_4_life-heritage_4_lifeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA46316B579B5DA114289667 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A7678F4B5C03132515CDDA /* libPods-heritage_4_life.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-heritage_4_life.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01315E1A0DB4495BDD8AA07 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Medium.ttf"; path = "../assets/fonts/OpenSans-Medium.ttf"; sourceTree = "<group>"; };
-		C0A881CF5CF3F2B244570E2A /* Pods-heritage_4_life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life.debug.xcconfig"; path = "Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life.debug.xcconfig"; sourceTree = "<group>"; };
 		C4BBBEBB678B4BF4B1293D0D /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Regular.ttf"; path = "../assets/fonts/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
-		D00AAFFCFCFDA5787532823F /* Pods-heritage_4_life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heritage_4_life.release.xcconfig"; path = "Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life.release.xcconfig"; sourceTree = "<group>"; };
+		D6921941E9BB2155238BE426 /* libPods-heritage_4_life-heritage_4_lifeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-heritage_4_life-heritage_4_lifeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28E80506C1A46079F128F55 /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Bold.ttf"; path = "../assets/fonts/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
 		E6E6379E25BF4BA39968A5BD /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF68E3733C33B6898317E18 /* libPods-heritage_4_life-heritage_4_lifeTests.a in Frameworks */,
+				ADE15F4C2D1CADD7B526A624 /* libPods-heritage_4_life-heritage_4_lifeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6172F2D35A4C3AA820D92908 /* libPods-heritage_4_life.a in Frameworks */,
+				CEF1C8246F33D7D0AA9608D2 /* libPods-heritage_4_life.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE4F9A55B5A61401D538770 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
+				27554B2FB150227A66F21A67 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6423831EA8574132BED9D8CC /* libPods-heritage_4_life.a */,
-				ABFE59519B596E51CEFDCCC0 /* libPods-heritage_4_life-heritage_4_lifeTests.a */,
-				6F027A6D4159B827201BBB7B /* libPods-OneSignalNotificationServiceExtension.a */,
+				AA46316B579B5DA114289667 /* libPods-OneSignalNotificationServiceExtension.a */,
+				B2A7678F4B5C03132515CDDA /* libPods-heritage_4_life.a */,
+				D6921941E9BB2155238BE426 /* libPods-heritage_4_life-heritage_4_lifeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,12 +215,12 @@
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0A881CF5CF3F2B244570E2A /* Pods-heritage_4_life.debug.xcconfig */,
-				D00AAFFCFCFDA5787532823F /* Pods-heritage_4_life.release.xcconfig */,
-				6C97AB639B58BBB4B15BBE30 /* Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig */,
-				1D0AE47A65C8663E3B452821 /* Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig */,
-				897346232A9C552CA5750532 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				5DD278D701CFE95B5BCAA6EC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				1A7E69C6FF51658858CC16EA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				7600BCA2EC4C0152F867FB9F /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				068E58F48BB4C41DC006CC16 /* Pods-heritage_4_life.debug.xcconfig */,
+				679314108AFE6C1FC8AE7D97 /* Pods-heritage_4_life.release.xcconfig */,
+				39AD1EB44D1D26C3CE092BF5 /* Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig */,
+				258EC2C38CFD184132CAA596 /* Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -249,12 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "heritage_4_lifeTests" */;
 			buildPhases = (
-				A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */,
+				B7C100F43419DFD95EF8FD63 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */,
-				4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */,
+				A6D25199A6A0A18D9006C32D /* [CP] Embed Pods Frameworks */,
+				5B6B1CBA171BAF027864830C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,15 +270,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "heritage_4_life" */;
 			buildPhases = (
-				3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */,
+				C17D811BFF08AA549683D3C9 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
-				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
 				79B2A36B27D608C100343082 /* Embed App Extensions */,
+				AE1D27571583AE26A2B2D13E /* [CP] Embed Pods Frameworks */,
+				04233073159407223AD46A2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,7 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79B2A36827D608C100343082 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				F9A2CF0639525ADB0884090B /* [CP] Check Pods Manifest.lock */,
+				9450221EE3CCB6EA4F01AE5C /* [CP] Check Pods Manifest.lock */,
 				79B2A35C27D608C100343082 /* Sources */,
 				79B2A35D27D608C100343082 /* Frameworks */,
 				79B2A35E27D608C100343082 /* Resources */,
@@ -400,46 +400,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */ = {
+		04233073159407223AD46A2E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-heritage_4_life-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */ = {
+		5B6B1CBA171BAF027864830C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -456,7 +434,63 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */ = {
+		9450221EE3CCB6EA4F01AE5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6D25199A6A0A18D9006C32D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life-heritage_4_lifeTests/Pods-heritage_4_life-heritage_4_lifeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE1D27571583AE26A2B2D13E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C100F43419DFD95EF8FD63 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -478,41 +512,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heritage_4_life/Pods-heritage_4_life-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9A2CF0639525ADB0884090B /* [CP] Check Pods Manifest.lock */ = {
+		C17D811BFF08AA549683D3C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -527,7 +527,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-heritage_4_life-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -599,7 +599,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C97AB639B58BBB4B15BBE30 /* Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig */;
+			baseConfigurationReference = 39AD1EB44D1D26C3CE092BF5 /* Pods-heritage_4_life-heritage_4_lifeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -626,7 +626,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0AE47A65C8663E3B452821 /* Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig */;
+			baseConfigurationReference = 258EC2C38CFD184132CAA596 /* Pods-heritage_4_life-heritage_4_lifeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -650,7 +650,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0A881CF5CF3F2B244570E2A /* Pods-heritage_4_life.debug.xcconfig */;
+			baseConfigurationReference = 068E58F48BB4C41DC006CC16 /* Pods-heritage_4_life.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -660,6 +660,7 @@
 				DEVELOPMENT_TEAM = 5J32DX293G;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = heritage_4_life/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,7 +692,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D00AAFFCFCFDA5787532823F /* Pods-heritage_4_life.release.xcconfig */;
+			baseConfigurationReference = 679314108AFE6C1FC8AE7D97 /* Pods-heritage_4_life.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -700,6 +701,7 @@
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5J32DX293G;
 				INFOPLIST_FILE = heritage_4_life/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,7 +731,7 @@
 		};
 		79B2A36927D608C100343082 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 897346232A9C552CA5750532 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = 1A7E69C6FF51658858CC16EA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -747,7 +749,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -769,7 +771,7 @@
 		};
 		79B2A36A27D608C100343082 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DD278D701CFE95B5BCAA6EC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = 7600BCA2EC4C0152F867FB9F /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -788,7 +790,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
