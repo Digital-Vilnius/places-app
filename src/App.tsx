@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { PersistGate } from 'redux-persist/integration/react';
 import { QueryClientProvider } from 'react-query';
 import queryClient from '@core/query';
@@ -10,11 +10,16 @@ import { setupTranslations } from '@core/translations';
 import { setupNotifications } from '@core/notifications';
 import { Platform } from 'react-native';
 import { CurrentLocationProvider } from '@core/location/provider';
+import SplashScreen from 'react-native-splash-screen';
 
 setupNotifications();
 setupTranslations();
 
 const App: FC = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <>
       <QueryClientProvider client={queryClient}>

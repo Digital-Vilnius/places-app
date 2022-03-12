@@ -297,6 +297,8 @@ PODS:
   - React-jsinspector (0.67.3)
   - React-logger (0.67.3):
     - glog
+  - react-native-geolocation (2.0.2):
+    - React
   - react-native-google-maps (0.30.1):
     - Google-Maps-iOS-Utils (= 3.10.3)
     - GoogleMaps (= 5.1.0)
@@ -307,6 +309,8 @@ PODS:
     - OneSignalXCFramework (= 3.10.1)
     - React (< 1.0.0, >= 0.13.0)
   - react-native-safe-area-context (3.4.1):
+    - React-Core
+  - react-native-splash-screen (3.3.0):
     - React-Core
   - React-perflogger (0.67.3)
   - React-RCTActionSheet (0.67.3):
@@ -375,7 +379,7 @@ PODS:
     - React-perflogger (= 0.67.3)
   - RNCAsyncStorage (1.16.1):
     - React-Core
-  - RNGestureHandler (2.3.0):
+  - RNGestureHandler (2.3.1):
     - React-Core
   - RNLocalize (2.2.0):
     - React-Core
@@ -457,10 +461,12 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-google-maps (from `../node_modules/react-native-maps`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-onesignal (from `../node_modules/react-native-onesignal`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -535,6 +541,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-geolocation:
+    :path: "../node_modules/@react-native-community/geolocation"
   react-native-google-maps:
     :path: "../node_modules/react-native-maps"
   react-native-maps:
@@ -543,6 +551,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-onesignal"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -614,10 +624,12 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 15ea57ead631a11fad57634ff69f78e797113a39
   React-jsinspector: 1e1e03345cf6d47779e2061d679d0a87d9ae73d8
   React-logger: 1e10789cb84f99288479ba5f20822ce43ced6ffe
+  react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-google-maps: 17432eb7412df3c65d7c7c52ede085d0f5624f77
   react-native-maps: d752b0dd0e1951d815b1336332835aab6b4a836f
   react-native-onesignal: 7643517fe655b94cfda8e697ec16f9b9135648b8
   react-native-safe-area-context: 9e40fb181dac02619414ba1294d6c2a807056ab9
+  react-native-splash-screen: 4312f786b13a81b5169ef346d76d33bc0c6dc457
   React-perflogger: 93d3f142d6d9a46e635f09ba0518027215a41098
   React-RCTActionSheet: 87327c3722203cc79cf79d02fb83e7332aeedd18
   React-RCTAnimation: 009c87c018d50e0b38692699405ebe631ff4872d
@@ -631,13 +643,13 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: af1946623656f9c5fd64ca6f36f3863516193446
   ReactCommon: 650e33cde4fb7d36781cd3143f5276da0abb2f96
   RNCAsyncStorage: b49b4e38a1548d03b74b30e558a1d18465b94be7
-  RNGestureHandler: 77d59828d40838c9fabb76a12d2d0a80c006906f
+  RNGestureHandler: 68f660f1080d3300936a67ce5c6879bd8f26ecc2
   RNLocalize: 6571ea792a7dcb6d217c98c14d9147e9417cef62
   RNReanimated: 32c91e28f5780937b8efc07ddde1bab8d373fe0b
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   Yoga: 90dcd029e45d8a7c1ff059e8b3c6612ff409061a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: b5986bf767343eae5f1b776f0a4584a9d4052d32
+PODFILE CHECKSUM: abcd80b460b117e0884fb193f1adab755ae9597c
 
 COCOAPODS: 1.11.2
