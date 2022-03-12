@@ -20,7 +20,7 @@ const Places: FC = () => {
       onRefresh={refetch}
       onPlacePress={handlePlacePress}
       places={places}
-      refreshing={isRefetching}
+      isRefreshing={isRefetching}
     />
   );
 };

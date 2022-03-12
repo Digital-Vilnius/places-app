@@ -30,3 +30,14 @@ export const notificationRoute: NotificationRoute = 'Notification';
 
 export type UsagePolicyRoute = 'UsagePolicy';
 export const usagePolicyRoute: UsagePolicyRoute = 'UsagePolicy';
+
+export interface DrawerNavigationItem {
+  label: string;
+  route:
+    | PlacesRoute
+    | AboutProjectRoute
+    | ContactsRoute
+    | SettingsRoute
+    | MapRoute
+    | NotificationsRoute;
+}

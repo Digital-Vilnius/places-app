@@ -11,6 +11,7 @@ export interface Place {
   coordinates: Coordinates;
   email: string | null;
   address: string;
+  distance: number;
 }
 
 export interface TimetableItem {
@@ -21,4 +22,8 @@ export interface TimetableItem {
 export interface Coordinates {
   longitude: number;
   latitude: number;
+}
+
+export interface PlacesFilter {
+  distanceTo: number | null;
 }

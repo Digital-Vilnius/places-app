@@ -19,6 +19,9 @@
     "success": "Success",
     "usage_policy": "Usage policy"
   },
+  "units": {
+    "km": "{{distance}} km"
+  },
   "buttons": {
     "back": "Back",
     "update_settings": "Update settings",

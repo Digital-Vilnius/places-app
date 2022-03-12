@@ -9,12 +9,8 @@ const menuIcon = require('@assets/images/menu.png');
 const DrawerOpenButton: FC = () => {
   const navigation = useNavigation<DrawerNavigationProp<DrawerParamList>>();
 
-  const handleOnPress = () => {
-    navigation.openDrawer();
-  };
-
   return (
-    <TouchableOpacity onPress={handleOnPress}>
+    <TouchableOpacity onPress={navigation.openDrawer}>
       <Image source={menuIcon} />
     </TouchableOpacity>
   );

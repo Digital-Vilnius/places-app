@@ -6,14 +6,14 @@ import PlacesListItem from './PlacesListItem';
 import { Place } from '../types';
 
 interface Props {
-  refreshing: boolean;
+  isRefreshing: boolean;
   onRefresh: () => void;
   places: Place[];
   onPlacePress: (place: Place) => void;
 }
 
 const Places: FC<Props> = (props) => {
-  const { refreshing, onRefresh, places, onPlacePress } = props;
+  const { isRefreshing, onRefresh, places, onPlacePress } = props;
 
   const renderItem = (item: ListRenderItemInfo<Place>) => {
     const place = item.item;
@@ -24,7 +24,7 @@ const Places: FC<Props> = (props) => {
     <FlatList
       contentContainerStyle={styles.content}
       ItemSeparatorComponent={ListSeparator}
-      refreshing={refreshing}
+      refreshing={isRefreshing}
       onRefresh={onRefresh}
       data={places}
       keyExtractor={(item) => item.id.toString()}

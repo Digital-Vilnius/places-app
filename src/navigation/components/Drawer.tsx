@@ -1,9 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { DrawerContentComponentProps } from '@react-navigation/drawer/src/types';
 import {
   aboutProjectRoute,
   contactsRoute,
+  DrawerNavigationItem,
   mapRoute,
   notificationsRoute,
   placesRoute,
@@ -20,6 +21,45 @@ const Drawer: FC<DrawerContentComponentProps> = (props) => {
   const { navigation } = props;
   const { t } = useTranslation();
 
+  const items = useMemo<DrawerNavigationItem[]>(() => {
+    return [
+      {
+        label: t('titles.map'),
+        route: mapRoute,
+      },
+      {
+        label: t('titles.discover'),
+        route: placesRoute,
+      },
+      {
+        label: t('titles.notifications'),
+        route: notificationsRoute,
+      },
+      {
+        label: t('titles.about_project'),
+        route: aboutProjectRoute,
+      },
+      {
+        label: t('titles.contact_us'),
+        route: contactsRoute,
+      },
+      {
+        label: t('titles.settings'),
+        route: settingsRoute,
+      },
+    ];
+  }, [t]);
+
+  const renderItem = (item: DrawerNavigationItem) => (
+    <TouchableOpacity
+      key={item.label}
+      style={styles.item}
+      onPress={() => navigation.navigate(item.route)}
+    >
+      <Text style={styles.label}>{item.label}</Text>
+    </TouchableOpacity>
+  );
+
   return (
     <View style={flex1}>
       <SafeAreaView style={flex1}>
@@ -29,26 +69,7 @@ const Drawer: FC<DrawerContentComponentProps> = (props) => {
           </TouchableOpacity>
           <Image source={logo} />
         </View>
-        <View style={[flex1, styles.items]}>
-          <Text onPress={() => navigation.navigate(mapRoute)} style={styles.item}>
-            {t('titles.map')}
-          </Text>
-          <Text onPress={() => navigation.navigate(placesRoute)} style={styles.item}>
-            {t('titles.discover')}
-          </Text>
-          <Text onPress={() => navigation.navigate(notificationsRoute)} style={styles.item}>
-            {t('titles.notifications')}
-          </Text>
-          <Text onPress={() => navigation.navigate(aboutProjectRoute)} style={styles.item}>
-            {t('titles.about_project')}
-          </Text>
-          <Text onPress={() => navigation.navigate(contactsRoute)} style={styles.item}>
-            {t('titles.contact_us')}
-          </Text>
-          <Text onPress={() => navigation.navigate(settingsRoute)} style={styles.item}>
-            {t('titles.settings')}
-          </Text>
-        </View>
+        <View style={[flex1, styles.items]}>{items.map(renderItem)}</View>
       </SafeAreaView>
     </View>
   );
@@ -69,6 +90,8 @@ const styles = StyleSheet.create({
   },
   item: {
     paddingVertical: 30,
+  },
+  label: {
     fontSize: fontSizes.l,
     lineHeight: lineHeights.l,
     fontFamily: fonts.primary.bold,

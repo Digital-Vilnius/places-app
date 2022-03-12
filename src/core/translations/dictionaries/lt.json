@@ -19,6 +19,9 @@
     "success": "Sėkmingai atlikta",
     "usage_policy": "Naudojimosi politika"
   },
+  "units": {
+    "km": "{{distance}} km"
+  },
   "buttons": {
     "back": "Atgal",
     "update_settings": "Atnaujinti nustatymus",

@@ -19,6 +19,9 @@
     "success": "Успех",
     "usage_policy": "Политика использования"
   },
+  "units": {
+    "km": "{{distance}} км"
+  },
   "buttons": {
     "back": "Назад",
     "update_settings": "Обновить настройки",

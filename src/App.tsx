@@ -9,6 +9,7 @@ import Toast from 'react-native-toast-message';
 import { setupTranslations } from '@core/translations';
 import { setupNotifications } from '@core/notifications';
 import { Platform } from 'react-native';
+import { CurrentLocationProvider } from '@core/location/provider';
 
 setupNotifications();
 setupTranslations();
@@ -19,7 +20,9 @@ const App: FC = () => {
       <QueryClientProvider client={queryClient}>
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
-            <RootNavigator />
+            <CurrentLocationProvider>
+              <RootNavigator />
+            </CurrentLocationProvider>
           </PersistGate>
         </Provider>
       </QueryClientProvider>
