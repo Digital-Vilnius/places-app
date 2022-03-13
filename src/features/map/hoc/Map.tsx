@@ -1,6 +1,6 @@
-import React, { FC, useCallback, useEffect, useRef } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { LatLng } from 'react-native-maps';
-import { StyleSheet, View } from 'react-native';
+import { Dimensions, StyleSheet, View } from 'react-native';
 import { flex1 } from '@styles/styles';
 import MapView from 'react-native-maps';
 import { Place } from '@features/places/types';
@@ -16,37 +16,29 @@ import { NearPlaces } from '@features/places/hoc';
 import BottomSheet from '@gorhom/bottom-sheet';
 import { Map as ControlledMap } from '../components';
 
+const halfScreenHeight = Dimensions.get('window').height / 2;
+
 const Map: FC<WithCurrentLocationProps> = (props) => {
   const { currentLocation } = props;
   const { places } = usePlaces();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+  const [snapIndex, setSnapIndex] = useState<number>(0);
 
   const mapRef = useRef<MapView>(null);
-  const sheetRef = useRef<BottomSheet>(null);
+
+  const mapPaddingBottom = useMemo(() => {
+    return snapIndex === 0 ? 165 : halfScreenHeight;
+  }, [snapIndex]);
 
   const setLocation = useCallback((latLng: LatLng) => {
     if (mapRef && mapRef.current) {
-      mapRef.current.animateCamera({ center: latLng, zoom: 11 });
+      mapRef.current.animateCamera({ center: latLng, zoom: 17 });
     }
   }, []);
-
-  const setSnapPointIndex = useCallback(
-    (index: number) => {
-      if (sheetRef && sheetRef.current) {
-        sheetRef.current.snapToIndex(index);
-      }
-    },
-    [sheetRef]
-  );
 
   useEffect(() => {
     if (currentLocation) setLocation(currentLocation);
   }, [currentLocation, setLocation]);
-
-  const handlePlacePress = (place: Place) => {
-    setSnapPointIndex(0);
-    setLocation(place.coordinates);
-  };
 
   const navigateToPlace = (place: Place) => {
     navigation.navigate(placeRoute, { place });
@@ -55,25 +47,30 @@ const Map: FC<WithCurrentLocationProps> = (props) => {
   return (
     <View style={flex1}>
       <ControlledMap
+        mapPadding={{ top: 0, bottom: mapPaddingBottom, left: 0, right: 0 }}
         onMarkerPress={navigateToPlace}
         ref={mapRef}
         places={places}
-        style={styles.map}
       />
-      <BottomSheet backgroundStyle={styles.sheet} ref={sheetRef} snapPoints={[165, 375]}>
-        <NearPlaces onPlacePress={handlePlacePress} onPlaceLongPress={navigateToPlace} />
+      <BottomSheet
+        index={snapIndex}
+        onChange={setSnapIndex}
+        backgroundStyle={styles.sheet}
+        snapPoints={[165, halfScreenHeight]}
+      >
+        <NearPlaces
+          onPlacePress={(place) => setLocation(place.coordinates)}
+          onPlaceLongPress={navigateToPlace}
+        />
       </BottomSheet>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  map: {
-    marginBottom: 80 - borderRadius.s,
-  },
   sheet: {
-    borderTopRightRadius: borderRadius.s,
-    borderTopLeftRadius: borderRadius.s,
+    borderTopRightRadius: borderRadius.m,
+    borderTopLeftRadius: borderRadius.m,
   },
 });
 

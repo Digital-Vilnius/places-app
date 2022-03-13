@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ListRenderItemInfo, StyleSheet } from 'react-native';
+import { ListRenderItemInfo, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import { ListSeparator } from '@components';
 import { sizes } from '@styles/constants';
 import { BottomSheetFlatList } from '@gorhom/bottom-sheet';
@@ -12,10 +12,11 @@ interface Props {
   places: Place[];
   onPlacePress: (place: Place) => void;
   onPlaceLongPress: (place: Place) => void;
+  contentStyle?: StyleProp<ViewStyle>;
 }
 
 const NearPlaces: FC<Props> = (props) => {
-  const { isRefreshing, onRefresh, places, onPlacePress, onPlaceLongPress } = props;
+  const { isRefreshing, onRefresh, places, onPlacePress, onPlaceLongPress, contentStyle } = props;
 
   const renderItem = (item: ListRenderItemInfo<Place>) => {
     const place = item.item;
@@ -34,7 +35,7 @@ const NearPlaces: FC<Props> = (props) => {
       data={places}
       keyExtractor={(item) => item.id.toString()}
       ItemSeparatorComponent={ListSeparator}
-      contentContainerStyle={styles.content}
+      contentContainerStyle={[styles.content, contentStyle]}
       refreshing={isRefreshing}
       onRefresh={onRefresh}
       renderItem={renderItem}

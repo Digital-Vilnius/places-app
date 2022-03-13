@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Marker, Region } from 'react-native-maps';
-import { StyleProp, ViewStyle } from 'react-native';
+import { MapViewProps, Marker, Region } from 'react-native-maps';
 import { flex1 } from '@styles/styles';
 import MapView from 'react-native-maps';
 import { Place } from '@features/places/types';
@@ -12,23 +11,26 @@ const initialRegion: Region = {
   longitudeDelta: 0.8421,
 };
 
-interface Props {
+type Props = Omit<
+  MapViewProps,
+  'onMarkerPress' | 'initialRegion' | 'zoomEnabled' | 'zoomControlEnabled' | 'showsUserLocation'
+> & {
   places: Place[];
   onMarkerPress: (place: Place) => void;
-  style?: StyleProp<ViewStyle>;
-}
+};
 
 const Map = forwardRef<MapView, Props>((props, ref) => {
-  const { places, onMarkerPress, style } = props;
+  const { places, onMarkerPress, ...rest } = props;
 
   return (
     <MapView
       showsUserLocation={true}
       ref={ref}
-      style={[flex1, style]}
+      style={flex1}
       zoomEnabled
       zoomControlEnabled
       initialRegion={initialRegion}
+      {...rest}
     >
       {places.map((place) => (
         <Marker
