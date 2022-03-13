@@ -14,6 +14,7 @@ import { usePlaces } from '@features/places/hooks';
 import { borderRadius } from '@styles/constants';
 import { NearPlaces } from '@features/places/hoc';
 import BottomSheet from '@gorhom/bottom-sheet';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Map as ControlledMap } from '../components';
 
 const halfScreenHeight = Dimensions.get('window').height / 2;
@@ -21,14 +22,14 @@ const halfScreenHeight = Dimensions.get('window').height / 2;
 const Map: FC<WithCurrentLocationProps> = (props) => {
   const { currentLocation } = props;
   const { places } = usePlaces();
+  const { bottom } = useSafeAreaInsets();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const [snapIndex, setSnapIndex] = useState<number>(0);
-
   const mapRef = useRef<MapView>(null);
 
-  const mapPaddingBottom = useMemo(() => {
-    return snapIndex === 0 ? 165 : halfScreenHeight;
-  }, [snapIndex]);
+  const snapPoints = useMemo(() => {
+    return [165 + bottom, halfScreenHeight + bottom];
+  }, [bottom]);
 
   const setLocation = useCallback((latLng: LatLng) => {
     if (mapRef && mapRef.current) {
@@ -47,7 +48,7 @@ const Map: FC<WithCurrentLocationProps> = (props) => {
   return (
     <View style={flex1}>
       <ControlledMap
-        mapPadding={{ top: 0, bottom: mapPaddingBottom, left: 0, right: 0 }}
+        mapPadding={{ top: 0, bottom: snapPoints[snapIndex] - bottom, left: 0, right: 0 }}
         onMarkerPress={navigateToPlace}
         ref={mapRef}
         places={places}
@@ -56,7 +57,7 @@ const Map: FC<WithCurrentLocationProps> = (props) => {
         index={snapIndex}
         onChange={setSnapIndex}
         backgroundStyle={styles.sheet}
-        snapPoints={[165, halfScreenHeight]}
+        snapPoints={snapPoints}
       >
         <NearPlaces
           onPlacePress={(place) => setLocation(place.coordinates)}
