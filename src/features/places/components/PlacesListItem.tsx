@@ -22,11 +22,13 @@ const PlacesListItem: FC<Props> = (props) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.imageContainer}>
-        <View style={[styles.distanceContainer, center]}>
-          <Text style={styles.distance}>
-            {t('units.km', { distance: DistanceUtils.formatDistance(item.distance) })}
-          </Text>
-        </View>
+        {item.distance && (
+          <View style={[styles.distanceContainer, center]}>
+            <Text style={styles.distance}>
+              {t('units.km', { distance: DistanceUtils.formatDistance(item.distance) })}
+            </Text>
+          </View>
+        )}
         <Image style={styles.image} source={{ uri: image }} />
       </View>
       <Text numberOfLines={1} style={styles.title}>

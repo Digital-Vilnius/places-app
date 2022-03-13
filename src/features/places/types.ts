@@ -11,7 +11,7 @@ export interface Place {
   coordinates: Coordinates;
   email: string | null;
   address: string;
-  distance: number;
+  distance: number | null;
 }
 
 export interface TimetableItem {

@@ -6,12 +6,16 @@ const useCurrentLocation = () => {
   const [currentLocation, setCurrentLocation] = useState<Location | null>(null);
 
   const getCurrentLocationCallback = useCallback(() => {
-    Geolocation.getCurrentPosition((position) => {
-      setCurrentLocation({
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
-      });
-    });
+    Geolocation.getCurrentPosition(
+      (position) => {
+        setCurrentLocation({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        });
+      },
+      console.log,
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+    );
   }, [setCurrentLocation]);
 
   useEffect(() => {

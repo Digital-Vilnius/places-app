@@ -3,7 +3,7 @@ import { Location } from '@core/location/types';
 import { DistanceUtils } from '@utils';
 import { Place } from './types';
 
-export const mapPlace = (place: ApiPlace, location: Location): Place => ({
+export const mapPlace = (place: ApiPlace, location: Location | null): Place => ({
   id: place.id,
   title: place.place_title,
   type: place.place_type,
@@ -16,5 +16,5 @@ export const mapPlace = (place: ApiPlace, location: Location): Place => ({
   coordinates: place.coordinate,
   email: place.email,
   address: place.address,
-  distance: DistanceUtils.getDistanceBetweenCoords(place.coordinate, location),
+  distance: location ? DistanceUtils.getDistanceBetweenCoords(place.coordinate, location) : null,
 });

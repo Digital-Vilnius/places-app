@@ -18,7 +18,7 @@ const usePlaces = () => {
   const { isLoading, isRefetching, refetch, data } = useQuery(getQueryKey(locale), getPlacesFn);
 
   const places = useMemo<Place[]>(() => {
-    if (!currentLocation || !data) return [];
+    if (!data) return [];
     return getPlaces(data.response, currentLocation);
   }, [currentLocation, data]);
 

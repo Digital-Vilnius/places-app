@@ -28,9 +28,11 @@ const NearPlacesListItem: FC<Props> = (props) => {
           <Text style={styles.type}>{item.type}</Text>
         </View>
       </View>
-      <Text style={styles.type}>
-        {t('units.km', { distance: DistanceUtils.formatDistance(item.distance) })}
-      </Text>
+      {item.distance && (
+        <Text style={styles.type}>
+          {t('units.km', { distance: DistanceUtils.formatDistance(item.distance) })}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 };

@@ -3,7 +3,7 @@ import { Location } from '../types';
 import { CurrentLocationContext } from '../provider';
 
 export interface WithCurrentLocationProps {
-  currentLocation: Location;
+  currentLocation: Location | null;
 }
 
 const withCurrentLocation = <T extends WithCurrentLocationProps = WithCurrentLocationProps>(
